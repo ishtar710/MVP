@@ -1,0 +1,690 @@
+[GPV]17:42:02.179 [http-nio-80-exec-10] INFO  com.kt.dpla.support.lamp.aop.UUIDAop(UUIDAop.java:34) -================== Method : scisApply, TransactionId : SCIS20251001174202000002 =================
+2025-10-01T08:42:02.189013871Z http-nio-80-exec-10 DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1759308122188, prevFileTime=1759294800000
+2025-10-01T08:42:02.189316691Z http-nio-80-exec-10 DEBUG Eligible files: {}
+2025-10-01T08:42:02.189505835Z http-nio-80-exec-10 DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1759308122188, prevFileTime=1759294800000
+2025-10-01T08:42:02.189725897Z http-nio-80-exec-10 DEBUG OutputStream closed
+2025-10-01T08:42:02.189870181Z http-nio-80-exec-10 DEBUG RollingFileManager executing synchronous FileRenameAction[/var/log/LAMP/gpv-65cd996db6-gpnt2_trace.log to /var/log/LAMP/gpv-65cd996db6-gpnt2_trace.log.2025-10-01-02, renameEmptyFiles=false]
+2025-10-01T08:42:02.190211628Z http-nio-80-exec-10 DEBUG Now writing to /var/log/LAMP/gpv-65cd996db6-gpnt2_trace.log at 2025-10-01T17:42:02.190+0900
+[GPV]17:42:02.191 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:112) ---★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★---
+[GPV]17:42:02.191 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:113) ---★ PICASO GPV 연동 System Process Start [2025-10-01 17:42:02.191]
+[GPV]17:42:02.191 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:114) ---★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★---
+2025-10-01T08:42:02.191867555Z Log4j2-TF-1-RollingFileManager-8 DEBUG DeleteAction complete in 0.006515118 seconds
+[GPV]17:42:02.191 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:119) ---★ . 그룹사전문내용 : [SL그룹사 신규청약]
+[GPV]17:42:02.192 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:119) ---★ . SourceSystem : [SCIS]
+[GPV]17:42:02.192 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:119) ---★ . interfaceId : [GPV0101]
+[GPV]17:42:02.192 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:119) ---★ . applicationKey : [SKY2w3pwybpc2aqrl3gnxaxdmaslfqqcndy]
+[GPV]17:42:02.192 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:119) ---★ . transactionId : [SCIS20251001174202000002]
+[GPV]17:42:02.192 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:122) ---★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★---
+[GPV]17:42:02.195 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.controller.GpvApplyController(GpvApplyController.java:104) -
+ SL그룹사 GPV0101 신규 요청 header==============> {
+  "accept" : [ "application/json, application/json, application/*+json, application/*+json" ],
+  "interfaceid" : [ "GPV0101" ],
+  "applicationkey" : [ "SKY2w3pwybpc2aqrl3gnxaxdmaslfqqcndy" ],
+  "sourcesystem" : [ "SCIS" ],
+  "content-type" : [ "application/json;charset=UTF-8" ],
+  "cache-control" : [ "no-cache" ],
+  "pragma" : [ "no-cache" ],
+  "user-agent" : [ "Java/1.8.0_121" ],
+  "content-length" : [ "660" ],
+  "transactionid" : [ "SCIS20251001174202000002" ],
+  "x-ghubpv-rst-cd" : [ "AGW0000" ],
+  "forwarded" : [ "for=61.78.32.73;host=agw.tb.ghubpv.co.kr;proto=http", "proto=http;host=agw.tb.ghubpv.co.kr;for=\"61.78.32.73:46110\"" ],
+  "x-forwarded-for" : [ "61.78.32.73" ],
+  "x-forwarded-proto" : [ "http,http" ],
+  "x-forwarded-port" : [ "80,80" ],
+  "x-forwarded-host" : [ "agw.tb.ghubpv.co.kr,gpv.picaso.svc.cluster.local" ],
+  "host" : [ "gpv.picaso.svc.cluster.local" ]
+} 
+ body==============> {
+  "gcode" : "SL",
+  "soCode" : null,
+  "gsvcContId" : "A4+g+QA5LWw1QLSGcXOEIQ==",
+  "orderNumber" : "SL2527400038589",
+  "orderTypeCd" : "N1",
+  "receiptDateTime" : "20251001174201",
+  "completeDateTime" : "20251010140000",
+  "ktSvcContId" : null,
+  "baseProductCd" : "0K01",
+  "updateTypeCd" : null,
+  "custTypeCd" : "01",
+  "custName" : "w7ps6WTEzL4y9/H1PW2EWA==",
+  "genderCd" : "M",
+  "birthYear" : "1996",
+  "inetSvcContId" : "twnB2J5YsTUFfe2kUUSv/Q==",
+  "reSaleInetSvcContId" : null,
+  "usePurposeCd" : "1",
+  "vodOpenYn" : "Y",
+  "ppvLimitAmount" : "1000000",
+  "zipCode" : "03909",
+  "officeCd" : "R00423",
+  "dongCd" : "303826",
+  "addrDefault" : "g7bogZxBfjyeyWGIWYnpzM0sUNtZyOTJvlST5oRuJZTVApLnOYOiZwtkrz2YoL6p",
+  "addrDetail" : "",
+  "staticIpAddress" : null,
+  "selfInstallYn" : null,
+  "stbModelCd" : "K9209343",
+  "macAddress" : "zURrShDlM1qBEA+rqQ167w==",
+  "pinNo" : "0000",
+  "productCnt" : "0",
+  "productList" : [ ],
+  "mobilePayYn" : null
+}
+[GPV]17:42:02.197 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.GpcomApplyService(GpcomApplyService.java:158) -
+ 복호화==============> {
+  "gcode" : "SL",
+  "soCode" : null,
+  "gsvcContId" : "0012501666",
+  "orderNumber" : "SL2527400038589",
+  "orderTypeCd" : "N1",
+  "receiptDateTime" : "20251001174201",
+  "completeDateTime" : "20251010140000",
+  "ktSvcContId" : null,
+  "baseProductCd" : "0K01",
+  "updateTypeCd" : null,
+  "custTypeCd" : "01",
+  "custName" : "조현*",
+  "genderCd" : "M",
+  "birthYear" : "1996",
+  "inetSvcContId" : "0012500703",
+  "reSaleInetSvcContId" : "",
+  "usePurposeCd" : "1",
+  "vodOpenYn" : "Y",
+  "ppvLimitAmount" : "1000000",
+  "zipCode" : "03909",
+  "officeCd" : "R00423",
+  "dongCd" : "303826",
+  "addrDefault" : "서울 마포구 매봉산로 45",
+  "addrDetail" : "",
+  "staticIpAddress" : null,
+  "selfInstallYn" : null,
+  "stbModelCd" : "K9209343",
+  "macAddress" : "001DEC973B9C",
+  "pinNo" : "0000",
+  "productCnt" : "0",
+  "productList" : [ ],
+  "mobilePayYn" : null
+}
+[GPV]17:42:02.255 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.MeinNewApyService(MeinNewApyService.java:84) -============== 신규신청-GA0101-meinApply ==============
+[GPV]17:42:02.257 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.MeinNewApyService(MeinNewApyService.java:121) -
+ mein apiPath==============> http://tb.eif.mein.svc:80/GPV/AddAccount
+[GPV]17:42:02.261 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.MeinNewApyService(MeinNewApyService.java:165) -
+ mein요청 meinHeadVo==============> {
+  "transactionId" : "SCIS20251001174202000002",
+  "applicationKey" : "GPVACFSOKGABUGUINMDGHTRJHYHFAS76"
+}
+[GPV]17:42:02.263 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.MeinNewApyService(MeinNewApyService.java:166) -
+ mein요청 meinBodyVo==============> {
+  "soCode" : null,
+  "svcContId" : "qtV4Y2YuP7pssa2J3aBwzg==",
+  "usePurposeCd" : "1",
+  "custTypeCd" : "01",
+  "custName" : "FJENVep+n16m6FLlNBaJsQ==",
+  "genderCd" : "1001",
+  "birthYear" : "1996",
+  "inetSvcContId" : "twnB2J5YsTUFfe2kUUSv/Q==",
+  "renewYn" : null,
+  "renewSvcContId" : null,
+  "pinNo" : "tEARUKh0XuLOzWx77RzaTA==",
+  "vodOpenYn" : "Y",
+  "limitAmount" : "1000000",
+  "zipCode" : "03909",
+  "officeCd" : "R00423",
+  "dongCd" : "303826",
+  "mobilePayYn" : null,
+  "stbModelCd" : "K9209343",
+  "stbMac" : "zURrShDlM1qBEA+rqQ167w==",
+  "addrDefault" : "g7bogZxBfjyeyWGIWYnpzM0sUNtZyOTJvlST5oRuJZTVApLnOYOiZwtkrz2YoL6p",
+  "addrDetail" : "",
+  "productCnt" : "1",
+  "svcScrCd" : "GPV",
+  "productList" : [ {
+    "productCd" : "0K01",
+    "contractYn" : "N",
+    "contractPeriod" : "",
+    "expiredDt" : ""
+  } ],
+  "gCode" : "SL"
+}
+[GPV]17:42:02.265 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:88) -[post]uri    : http://tb.eif.mein.svc:80/GPV/AddAccount
+[GPV]17:42:02.265 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:89) -[post]header : {transactionId=[SCIS20251001174202000002], applicationKey=[GPVACFSOKGABUGUINMDGHTRJHYHFAS76], Content-Type=[application/json]}
+[GPV]17:42:02.265 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:90) -[post]body   : {"soCode":null,"svcContId":"qtV4Y2YuP7pssa2J3aBwzg==","usePurposeCd":"1","custTypeCd":"01","custName":"FJENVep+n16m6FLlNBaJsQ==","genderCd":"1001","birthYear":"1996","inetSvcContId":"twnB2J5YsTUFfe2kUUSv/Q==","renewYn":null,"renewSvcContId":null,"pinNo":"tEARUKh0XuLOzWx77RzaTA==","vodOpenYn":"Y","limitAmount":"1000000","zipCode":"03909","officeCd":"R00423","dongCd":"303826","mobilePayYn":null,"stbModelCd":"K9209343","stbMac":"zURrShDlM1qBEA+rqQ167w==","addrDefault":"g7bogZxBfjyeyWGIWYnpzM0sUNtZyOTJvlST5oRuJZTVApLnOYOiZwtkrz2YoL6p","addrDetail":"","productCnt":"1","svcScrCd":"GPV","productList":[{"productCd":"0K01","contractYn":"N","contractPeriod":"","expiredDt":""}],"gCode":"SL"}
+[GPV]17:42:02.569 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:157) -API 실행 시간: 305ms
+[GPV]17:42:02.569 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:317) -🔢 CONTAINER_NAME: gpv
+[GPV]17:42:02.569 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:318) -🌐 NODE_NAME: picaso.worker01.c01.yz-tb-ocp4.container.kt.co.kr
+[GPV]17:42:02.570 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:319) -📍 POD_NAME: gpv-65cd996db6-gpnt2
+[GPV]17:42:02.570 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:320) -🔢 HOST_IP: 192.168.54.21
+2025-10-01T08:42:02.571140561Z http-nio-80-exec-10 DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1759308122570, prevFileTime=1759294800000
+2025-10-01T08:42:02.571576444Z http-nio-80-exec-10 DEBUG Eligible files: {}
+2025-10-01T08:42:02.571778196Z http-nio-80-exec-10 DEBUG Formatting file name. useCurrentTime=false. currentFileTime=1759308122570, prevFileTime=1759294800000
+2025-10-01T08:42:02.572043498Z http-nio-80-exec-10 DEBUG OutputStream closed
+2025-10-01T08:42:02.572213734Z http-nio-80-exec-10 DEBUG RollingFileManager executing synchronous FileRenameAction[/var/log/ELK/gpv-65cd996db6-gpnt2_elk.log to /var/log/ELK/gpv-65cd996db6-gpnt2_elk.log.2025-10-01-02, renameEmptyFiles=false]
+2025-10-01T08:42:02.572629779Z http-nio-80-exec-10 DEBUG Now writing to /var/log/ELK/gpv-65cd996db6-gpnt2_elk.log at 2025-10-01T17:42:02.572+0900
+[GPV]17:42:02.573 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.MeinNewApyService(MeinNewApyService.java:168) -
+ mein응답==============>
+ {
+  "responseCode" : "1",
+  "responseMessage" : "Success",
+  "systemCode" : "1",
+  "systemMessage" : "Success"
+}
+[GPV]17:42:02.573 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.NcrabNewApyService(NcrabNewApyService.java:84) -============== 신규신청 – IN1001(신규신청)-ncrabApply ==============
+[GPV]17:42:02.574 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.NcrabNewApyService(NcrabNewApyService.java:89) -
+ ncrab apiPath==============> https://test.ncrabsvc.kt.com:8090/charging/v1/parent/setParentModifyInfo
+[GPV]17:42:02.574 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.NcrabNewApyService(NcrabNewApyService.java:91) -
+ ncrab Head 호출 ==============> NcrabComnHeadReqVo(requestSystem=33C220, requestHostname=gpv-65cd996db6-gpnt2, responseSystem=nCRAB, responseHostname=test.ncrabsvc.kt.com, timestamp=20251001174202574, version=1.0, authorization=Basic U1lTVEVNMjoxMjcuMC4wLjI=, hashValue=null)
+[GPV]17:42:02.584 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.NcrabNewApyService(NcrabNewApyService.java:140) -
+ IN1001요청 ncrabHeadVo==============>
+ {
+  "request_system" : "33C220",
+  "request_hostname" : "gpv-65cd996db6-gpnt2",
+  "response_system" : "nCRAB",
+  "response_hostname" : "test.ncrabsvc.kt.com",
+  "timestamp" : "20251001174202574",
+  "version" : "1.0",
+  "authorization" : "Basic U1lTVEVNMjoxMjcuMC4wLjI=",
+  "hash_value" : null
+}
+[GPV]17:42:02.585 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.NcrabNewApyService(NcrabNewApyService.java:141) -
+ IN1001요청 ncrabBodyVo==============>
+ {
+  "transaction_id" : "SCIS20251001174202000002",
+  "market_id" : "SKY001",
+  "subscriber_id_type" : "A",
+  "subscriber_type" : "130T",
+  "order_number" : "SL2527400038589",
+  "method" : "I",
+  "order_sequence" : "1",
+  "customer_id" : "SL000001927",
+  "icis_event_date_time" : "20251001174201",
+  "idms_event_date_time" : "20251001174202",
+  "subscriber_id" : "SL000001927",
+  "ipmedia_status" : "4101",
+  "order_code" : "4201",
+  "change_code" : "",
+  "product_code" : "0K01",
+  "subscriber_name" : "조현*",
+  "subscriber_birthday" : "1996",
+  "vod_yn" : "Y",
+  "ppv_isu_yn" : "N",
+  "ipmedia_b2b" : "N",
+  "contact_route" : "22",
+  "product_list" : [ {
+    "product_id" : "0K01",
+    "product_subscription_id" : ""
+  } ]
+}
+[GPV]17:42:02.587 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:88) -[post]uri    : https://test.ncrabsvc.kt.com:8090/charging/v1/parent/setParentModifyInfo
+[GPV]17:42:02.587 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:89) -[post]header : {request_system=[33C220], request_hostname=[gpv-65cd996db6-gpnt2], response_system=[nCRAB], response_hostname=[test.ncrabsvc.kt.com], timestamp=[20251001174202574], version=[1.0], authorization=[Basic U1lTVEVNMjoxMjcuMC4wLjI=], hash_value=[null], Content-Type=[application/json]}
+[GPV]17:42:02.587 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:90) -[post]body   : {"transaction_id":"SCIS20251001174202000002","market_id":"SKY001","subscriber_id_type":"A","subscriber_type":"130T","order_number":"SL2527400038589","method":"I","order_sequence":"1","customer_id":"SL000001927","icis_event_date_time":"20251001174201","idms_event_date_time":"20251001174202","subscriber_id":"SL000001927","ipmedia_status":"4101","order_code":"4201","change_code":"","product_code":"0K01","subscriber_name":"조현*","subscriber_birthday":"1996","vod_yn":"Y","ppv_isu_yn":"N","ipmedia_b2b":"N","contact_route":"22","product_list":[{"product_id":"0K01","product_subscription_id":""}]}
+[GPV]17:42:02.785 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:157) -API 실행 시간: 199ms
+[GPV]17:42:02.786 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:317) -🔢 CONTAINER_NAME: gpv
+[GPV]17:42:02.786 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:318) -🌐 NODE_NAME: picaso.worker01.c01.yz-tb-ocp4.container.kt.co.kr
+[GPV]17:42:02.786 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:319) -📍 POD_NAME: gpv-65cd996db6-gpnt2
+[GPV]17:42:02.786 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:320) -🔢 HOST_IP: 192.168.54.21
+[GPV]17:42:02.787 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.NcrabNewApyService(NcrabNewApyService.java:143) -
+ ncrab 응답 IN1001==============> {
+  "kt_message" : {
+    "response_code" : "CHRG0000",
+    "response_message" : "정상적으로 처리되었습니다.",
+    "transaction_id" : "SCIS20251001174202000002",
+    "crelation_id" : "IDMS"
+  },
+  "Exception" : null
+}
+[GPV]17:42:02.787 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.UcemsNewApyService(UcemsNewApyService.java:65) -============== IPTV오더-GSMF_LEMS_OSB0001-ucemsApply ==============
+[GPV]17:42:02.788 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.comn.UcemsService(UcemsService.java:124) -
+ ucems apiPath==============> https://ap.ucems.xyz/CemsLinkage/PICASO/PICASOToUCEMS.asmx
+[GPV]17:42:02.792 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.comn.UcemsService(UcemsService.java:141) -
+ GSMF_LEMS_OSB0001 apiPath==============>
+ https://ap.ucems.xyz/CemsLinkage/PICASO/PICASOToUCEMS.asmx
+[GPV]17:42:02.805 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.comn.UcemsService(UcemsService.java:161) -
+ SL그룹사 ucems 요청=========><?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://www.ktcems.co.kr/CemsLinkage/PICASO">
+        <Header/>
+            <Body>
+                <ns2:IPTVOrderYDProc>
+                    <ns2:hcnIptvBodyData>
+                        <ns2:InPutType>
+                            A</ns2:InPutType>
+                        <ns2:ChangeCode>
+                            4201</ns2:ChangeCode>
+                        <ns2:SaID>
+                            SL000001927</ns2:SaID>
+                        <ns2:OdrNum>
+                            SL2527400038589</ns2:OdrNum>
+                        <ns2:OdrSeqNo>
+                            1</ns2:OdrSeqNo>
+                        <ns2:ReceiptDT>
+                            2025-10-01 17:42:01</ns2:ReceiptDT>
+                        <ns2:ConnHopeDT>
+                            2025101014</ns2:ConnHopeDT>
+                        <ns2:MacAddress>
+                            001DEC973B9C</ns2:MacAddress>
+                        <ns2:ModelCode>
+                            K9209343</ns2:ModelCode>
+                        <ns2:Name>
+                            조현*</ns2:Name>
+                        <ns2:ZipCode>
+                            03909</ns2:ZipCode>
+                        <ns2:AddrDong>
+                            303826</ns2:AddrDong>
+                        <ns2:AddrName1>
+                            서울 마포구 매봉산로 45</ns2:AddrName1>
+                        <ns2:OfficeCode>
+                            R00423</ns2:OfficeCode>
+                        <ns2:YnVodOpen>
+                            Y</ns2:YnVodOpen>
+                        <ns2:PinNum>
+                            0000</ns2:PinNum>
+                        <ns2:UsePurposeCode>
+                            1</ns2:UsePurposeCode>
+                        <ns2:AddSvcList>
+                            <ns2:string>
+                                0K01</ns2:string>
+                            </ns2:AddSvcList>
+                        </ns2:hcnIptvBodyData>
+                    </ns2:IPTVOrderYDProc>
+                </Body>
+            </Envelope>
+[GPV]17:42:02.806 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:189) -[post]uri    : https://ap.ucems.xyz/CemsLinkage/PICASO/PICASOToUCEMS.asmx
+[GPV]17:42:02.806 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:190) -[post]header : [Content-Type:"text/xml;charset=UTF-8", SOAPAction:"http://www.ktcems.co.kr/CemsLinkage/PICASO/IPTVOrderYDProc", Host:"ap.ucems.xyz"]
+[GPV]17:42:02.806 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:191) -[post]body   : <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://www.ktcems.co.kr/CemsLinkage/PICASO">
+    <Header/>
+    <Body>
+        <ns2:IPTVOrderYDProc>
+            <ns2:hcnIptvBodyData>
+                <ns2:InPutType>A</ns2:InPutType>
+                <ns2:ChangeCode>4201</ns2:ChangeCode>
+                <ns2:SaID>SL000001927</ns2:SaID>
+                <ns2:OdrNum>SL2527400038589</ns2:OdrNum>
+                <ns2:OdrSeqNo>1</ns2:OdrSeqNo>
+                <ns2:ReceiptDT>2025-10-01 17:42:01</ns2:ReceiptDT>
+                <ns2:ConnHopeDT>2025101014</ns2:ConnHopeDT>
+                <ns2:MacAddress>001DEC973B9C</ns2:MacAddress>
+                <ns2:ModelCode>K9209343</ns2:ModelCode>
+                <ns2:Name>조현*</ns2:Name>
+                <ns2:ZipCode>03909</ns2:ZipCode>
+                <ns2:AddrDong>303826</ns2:AddrDong>
+                <ns2:AddrName1>서울 마포구 매봉산로 45</ns2:AddrName1>
+                <ns2:OfficeCode>R00423</ns2:OfficeCode>
+                <ns2:YnVodOpen>Y</ns2:YnVodOpen>
+                <ns2:PinNum>0000</ns2:PinNum>
+                <ns2:UsePurposeCode>1</ns2:UsePurposeCode>
+                <ns2:AddSvcList>
+                    <ns2:string>0K01</ns2:string>
+                </ns2:AddSvcList>
+            </ns2:hcnIptvBodyData>
+        </ns2:IPTVOrderYDProc>
+    </Body>
+</Envelope>
+
+[GPV]17:42:02.957 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:193) -SL그룹사 응답원문   : <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><IPTVOrderYDProcResponse xmlns="http://www.ktcems.co.kr/CemsLinkage/PICASO"><IPTVOrderYDProcResult>1</IPTVOrderYDProcResult></IPTVOrderYDProcResponse></soap:Body></soap:Envelope>
+[GPV]17:42:02.957 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:157) -API 실행 시간: 151ms
+[GPV]17:42:02.959 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:317) -🔢 CONTAINER_NAME: gpv
+[GPV]17:42:02.959 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:318) -🌐 NODE_NAME: picaso.worker01.c01.yz-tb-ocp4.container.kt.co.kr
+[GPV]17:42:02.959 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:319) -📍 POD_NAME: gpv-65cd996db6-gpnt2
+[GPV]17:42:02.959 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:320) -🔢 HOST_IP: 192.168.54.21
+[GPV]17:42:02.960 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.comn.UcemsService(UcemsService.java:163) -
+ SL그룹사 ucems 응답=========><?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><IPTVOrderYDProcResponse xmlns="http://www.ktcems.co.kr/CemsLinkage/PICASO"><IPTVOrderYDProcResult>1</IPTVOrderYDProcResult></IPTVOrderYDProcResponse></soap:Body></soap:Envelope>
+[GPV]17:42:02.960 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.controller.SoapXmlGenerator(SoapXmlGenerator.java:61) -xmlString 응답==============>
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><IPTVOrderYDProcResponse xmlns="http://www.ktcems.co.kr/CemsLinkage/PICASO"><IPTVOrderYDProcResult>1</IPTVOrderYDProcResult></IPTVOrderYDProcResponse></soap:Body></soap:Envelope>
+[GPV]17:42:02.965 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.controller.SoapXmlGenerator(SoapXmlGenerator.java:75) -envelopeOut 응답==============>[{
+  "body" : {
+    "ipTvOrderYdProcResponse" : {
+      "ipTvOrderYdProcResult" : "1"
+    }
+  }
+}]
+[GPV]17:42:02.973 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.GpvApplyService(GpvApplyService.java:81) -gpvSvcContBasByInsert==============>
+ {
+  "gcode" : "SL",
+  "soCode" : null,
+  "gsvcContId" : "0012501666",
+  "orderNumber" : "SL2527400038589",
+  "orderTypeCd" : "N1",
+  "receiptDateTime" : "20251001174201",
+  "completeDateTime" : "20251010140000",
+  "ktSvcContId" : "SL000001927",
+  "baseProductCd" : "0K01",
+  "updateTypeCd" : null,
+  "custTypeCd" : "01",
+  "custName" : "조현*",
+  "genderCd" : "M",
+  "birthYear" : "1996",
+  "inetSvcContId" : "0012500703",
+  "reSaleInetSvcContId" : "",
+  "usePurposeCd" : "1",
+  "vodOpenYn" : "Y",
+  "ppvLimitAmount" : "1000000",
+  "zipCode" : "03909",
+  "officeCd" : "R00423",
+  "dongCd" : "303826",
+  "addrDefault" : "서울 마포구 매봉산로 45",
+  "addrDetail" : "",
+  "staticIpAddress" : null,
+  "selfInstallYn" : null,
+  "stbModelCd" : "K9209343",
+  "macAddress" : "001DEC973B9C",
+  "pinNo" : "0000",
+  "productCnt" : "0",
+  "productList" : [ ],
+  "mobilePayYn" : null
+}
+[GPV]17:42:02.974 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.service.apply.GpvApplyService(GpvApplyService.java:84) -gpvSvcContAdtnByInsert==============>
+ {
+  "gcode" : "SL",
+  "soCode" : null,
+  "gsvcContId" : "0012501666",
+  "orderNumber" : "SL2527400038589",
+  "orderTypeCd" : "N1",
+  "receiptDateTime" : "20251001174201",
+  "completeDateTime" : "20251010140000",
+  "ktSvcContId" : "SL000001927",
+  "baseProductCd" : "0K01",
+  "updateTypeCd" : null,
+  "custTypeCd" : "01",
+  "custName" : "조현*",
+  "genderCd" : "M",
+  "birthYear" : "1996",
+  "inetSvcContId" : "0012500703",
+  "reSaleInetSvcContId" : "",
+  "usePurposeCd" : "1",
+  "vodOpenYn" : "Y",
+  "ppvLimitAmount" : "1000000",
+  "zipCode" : "03909",
+  "officeCd" : "R00423",
+  "dongCd" : "303826",
+  "addrDefault" : "서울 마포구 매봉산로 45",
+  "addrDetail" : "",
+  "staticIpAddress" : null,
+  "selfInstallYn" : null,
+  "stbModelCd" : "K9209343",
+  "macAddress" : "001DEC973B9C",
+  "pinNo" : "0000",
+  "productCnt" : "0",
+  "productList" : [ ],
+  "mobilePayYn" : null
+}
+[GPV]17:42:02.996 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.controller.GpvApplyController(GpvApplyController.java:110) -
+ SL그룹사 GPV0101 신규 응답==============> {
+  "ktSvcContId" : "qtV4Y2YuP7pssa2J3aBwzg==",
+  "responseCode" : "GPV0000",
+  "responseMessage" : "정상적으로 처리 되었습니다"
+}
+[GPV]17:42:02.997 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:133) ---★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★---
+[GPV]17:42:02.997 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:134) ---★ [SL그룹사 신규청약.GPV0101] PICASO GPV 연동 System Process End [2025-10-01 17:42:02.996]
+[GPV]17:42:02.997 [http-nio-80-exec-10] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:135) ---★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★---
+[GPV]17:42:02.997 [http-nio-80-exec-10] INFO  com.kt.dpla.support.lamp.aop.LampLogControllerAop(LampLogControllerAop.java:74) -API 실행 시간: 811ms
+[GPV]17:42:02.998 [http-nio-80-exec-10] INFO  com.kt.dpla.support.lamp.service.LampLogService(LampLogService.java:120) -🔢 CONTAINER_NAME: gpv
+[GPV]17:42:02.998 [http-nio-80-exec-10] INFO  com.kt.dpla.support.lamp.service.LampLogService(LampLogService.java:121) -🌐 NODE_NAME: picaso.worker01.c01.yz-tb-ocp4.container.kt.co.kr
+[GPV]17:42:02.998 [http-nio-80-exec-10] INFO  com.kt.dpla.support.lamp.service.LampLogService(LampLogService.java:122) -📍 POD_NAME: gpv-65cd996db6-gpnt2
+[GPV]17:42:02.998 [http-nio-80-exec-10] INFO  com.kt.dpla.support.lamp.service.LampLogService(LampLogService.java:123) -🔢 HOST_IP: 192.168.54.21
+[GPV]17:42:02.998 [http-nio-80-exec-10] INFO  com.kt.dpla.support.lamp.service.LampLogService(LampLogService.java:165) -reqBodyRoot IN_RES ktSvcContId : qtV4Y2YuP7pssa2J3aBwzg==
+[GPV]17:42:02.999 [http-nio-80-exec-10] INFO  com.kt.dpla.support.lamp.service.LampLogService(LampLogService.java:166) -reqBodyRoot IN_RES gsvcContId : A4+g+QA5LWw1QLSGcXOEIQ==
+[GPV]17:46:59.688 [http-nio-80-exec-1] INFO  com.kt.dpla.support.lamp.aop.UUIDAop(UUIDAop.java:34) -================== Method : scisCmpln, TransactionId : SCIS20251001174659000004 =================
+[GPV]17:46:59.691 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:112) ---★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★---
+[GPV]17:46:59.691 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:113) ---★ PICASO GPV 연동 System Process Start [2025-10-01 17:46:59.691]
+[GPV]17:46:59.691 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:114) ---★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★---
+[GPV]17:46:59.692 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:119) ---★ . 그룹사전문내용 : [SL그룹사 준공완료]
+[GPV]17:46:59.692 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:119) ---★ . SourceSystem : [SCIS]
+[GPV]17:46:59.692 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:119) ---★ . interfaceId : [GPV0102]
+[GPV]17:46:59.692 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:119) ---★ . applicationKey : [SKY2w3pwybpc2aqrl3gnxaxdmaslfqqcndy]
+[GPV]17:46:59.692 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:119) ---★ . transactionId : [SCIS20251001174659000004]
+[GPV]17:46:59.692 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:122) ---★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★---
+[GPV]17:46:59.693 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.controller.GpvCmplnController(GpvCmplnController.java:82) -
+ SL그룹사 GPV0102 준공 요청 header==============> {
+  "accept" : [ "application/json, application/json, application/*+json, application/*+json" ],
+  "interfaceid" : [ "GPV0102" ],
+  "applicationkey" : [ "SKY2w3pwybpc2aqrl3gnxaxdmaslfqqcndy" ],
+  "sourcesystem" : [ "SCIS" ],
+  "content-type" : [ "application/json;charset=UTF-8" ],
+  "cache-control" : [ "no-cache" ],
+  "pragma" : [ "no-cache" ],
+  "user-agent" : [ "Java/1.8.0_121" ],
+  "content-length" : [ "339" ],
+  "transactionid" : [ "SCIS20251001174659000004" ],
+  "x-ghubpv-rst-cd" : [ "AGW0000" ],
+  "forwarded" : [ "for=61.78.32.73;host=agw.tb.ghubpv.co.kr;proto=http", "proto=http;host=agw.tb.ghubpv.co.kr;for=\"61.78.32.73:37338\"" ],
+  "x-forwarded-for" : [ "61.78.32.73" ],
+  "x-forwarded-proto" : [ "http,http" ],
+  "x-forwarded-port" : [ "80,80" ],
+  "x-forwarded-host" : [ "agw.tb.ghubpv.co.kr,gpv.picaso.svc.cluster.local" ],
+  "host" : [ "gpv.picaso.svc.cluster.local" ]
+} 
+ body==============> {
+  "gcode" : "SL",
+  "gsvcContId" : "A4+g+QA5LWw1QLSGcXOEIQ==",
+  "orderNumber" : "SL2527400038589",
+  "orderTypeCd" : "N1",
+  "ktSvcContId" : "qtV4Y2YuP7pssa2J3aBwzg==",
+  "receiptDateTime" : "20251001174201",
+  "completeDateTime" : "20251001174648",
+  "baseProductCd" : "0K01",
+  "officeCd" : "R00423",
+  "staticIpAddress" : null,
+  "selfInstallYn" : null,
+  "stbModelCd" : "K9209343",
+  "macAddress" : "zURrShDlM1qBEA+rqQ167w==",
+  "pinNo" : "0000"
+}
+[GPV]17:46:59.695 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.GpcomCmplnService(GpcomCmplnService.java:113) -
+ 복호화==============> {
+  "gcode" : "SL",
+  "gsvcContId" : "0012501666",
+  "orderNumber" : "SL2527400038589",
+  "orderTypeCd" : "N1",
+  "ktSvcContId" : "SL000001927",
+  "receiptDateTime" : "20251001174201",
+  "completeDateTime" : "20251001174648",
+  "baseProductCd" : "0K01",
+  "officeCd" : "R00423",
+  "staticIpAddress" : null,
+  "selfInstallYn" : null,
+  "stbModelCd" : "K9209343",
+  "macAddress" : "001DEC973B9C",
+  "pinNo" : "0000"
+}
+[GPV]17:46:59.731 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.MeinCmplnService(MeinCmplnService.java:72) -============== 준공-GA0102-meinCmpln ==============
+[GPV]17:46:59.731 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.MeinCmplnService(MeinCmplnService.java:78) -
+ mein apiPath==============> http://tb.eif.mein.svc:80/GPV/ConfirmAccount
+[GPV]17:46:59.732 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.MeinCmplnService(MeinCmplnService.java:92) -
+ GA0102 mein요청 meinHeadVo==============>
+ {
+  "transactionId" : "SCIS20251001174659000004",
+  "applicationKey" : "GPVACFSOKGABUGUINMDGHTRJHYHFAS76"
+}
+[GPV]17:46:59.733 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.MeinCmplnService(MeinCmplnService.java:93) -
+ GA0102 mein요청 meinBodyVo==============>
+ {
+  "svcContId" : "qtV4Y2YuP7pssa2J3aBwzg==",
+  "receiptDt" : "20251001174201",
+  "oltOfficeCd" : "R00423",
+  "svcScrCd" : "GPV"
+}
+[GPV]17:46:59.734 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:88) -[post]uri    : http://tb.eif.mein.svc:80/GPV/ConfirmAccount
+[GPV]17:46:59.734 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:89) -[post]header : {transactionId=[SCIS20251001174659000004], applicationKey=[GPVACFSOKGABUGUINMDGHTRJHYHFAS76], Content-Type=[application/json]}
+[GPV]17:46:59.734 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:90) -[post]body   : {"svcContId":"qtV4Y2YuP7pssa2J3aBwzg==","receiptDt":"20251001174201","oltOfficeCd":"R00423","svcScrCd":"GPV"}
+[GPV]17:46:59.805 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:157) -API 실행 시간: 71ms
+[GPV]17:46:59.805 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:317) -🔢 CONTAINER_NAME: gpv
+[GPV]17:46:59.805 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:318) -🌐 NODE_NAME: picaso.worker01.c01.yz-tb-ocp4.container.kt.co.kr
+[GPV]17:46:59.805 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:319) -📍 POD_NAME: gpv-65cd996db6-gpnt2
+[GPV]17:46:59.805 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:320) -🔢 HOST_IP: 192.168.54.21
+[GPV]17:46:59.806 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.MeinCmplnService(MeinCmplnService.java:95) -
+ mein응답==============>
+ {
+  "responseCode" : "1",
+  "responseMessage" : "Success",
+  "systemCode" : "1",
+  "systemMessage" : "Success"
+}
+[GPV]17:46:59.806 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.NcrabCmplnService(NcrabCmplnService.java:71) -============== 준공오더완료 – IN1003(청약확정통보)-ncrabCmpln ==============
+[GPV]17:46:59.808 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.NcrabCmplnService(NcrabCmplnService.java:83) -
+ ncrab apiPath==============> https://test.ncrabsvc.kt.com:8090/charging/v1/parent/subscribeReserveProductFix
+[GPV]17:46:59.809 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.NcrabCmplnService(NcrabCmplnService.java:86) -
+ ncrab Head 호출 ==============> NcrabComnHeadReqVo(requestSystem=33C220, requestHostname=gpv-65cd996db6-gpnt2, responseSystem=nCRAB, responseHostname=test.ncrabsvc.kt.com, timestamp=20251001174659808, version=1.0, authorization=Basic U1lTVEVNMjoxMjcuMC4wLjI=, hashValue=null)
+[GPV]17:46:59.810 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.NcrabCmplnService(NcrabCmplnService.java:109) -
+ ncrab요청 ncrabHeadVo==============>
+ {
+  "request_system" : "33C220",
+  "request_hostname" : "gpv-65cd996db6-gpnt2",
+  "response_system" : "nCRAB",
+  "response_hostname" : "test.ncrabsvc.kt.com",
+  "timestamp" : "20251001174659808",
+  "version" : "1.0",
+  "authorization" : "Basic U1lTVEVNMjoxMjcuMC4wLjI=",
+  "hash_value" : null
+}
+[GPV]17:46:59.811 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.NcrabCmplnService(NcrabCmplnService.java:110) -
+ ncrab요청 ncrabBodyVo==============>
+ {
+  "transaction_id" : "SCIS20251001174659000004",
+  "market_id" : "SKY001",
+  "subscriber_id_type" : "A",
+  "subscriber_id" : "SL000001927",
+  "interface_code" : "4201",
+  "icis_order_number" : "SL2527400038589",
+  "icis_transfer_time" : "20251001174659",
+  "idms_order_number" : "SL2527400038589",
+  "installation_completion_time" : "20251001174648",
+  "contact_route" : "22"
+}
+[GPV]17:46:59.812 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:88) -[post]uri    : https://test.ncrabsvc.kt.com:8090/charging/v1/parent/subscribeReserveProductFix
+[GPV]17:46:59.812 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:89) -[post]header : {request_system=[33C220], request_hostname=[gpv-65cd996db6-gpnt2], response_system=[nCRAB], response_hostname=[test.ncrabsvc.kt.com], timestamp=[20251001174659808], version=[1.0], authorization=[Basic U1lTVEVNMjoxMjcuMC4wLjI=], hash_value=[null], Content-Type=[application/json]}
+[GPV]17:46:59.812 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:90) -[post]body   : {"transaction_id":"SCIS20251001174659000004","market_id":"SKY001","subscriber_id_type":"A","subscriber_id":"SL000001927","interface_code":"4201","icis_order_number":"SL2527400038589","icis_transfer_time":"20251001174659","idms_order_number":"SL2527400038589","installation_completion_time":"20251001174648","contact_route":"22"}
+[GPV]17:46:59.924 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:157) -API 실행 시간: 113ms
+[GPV]17:46:59.925 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:317) -🔢 CONTAINER_NAME: gpv
+[GPV]17:46:59.925 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:318) -🌐 NODE_NAME: picaso.worker01.c01.yz-tb-ocp4.container.kt.co.kr
+[GPV]17:46:59.925 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:319) -📍 POD_NAME: gpv-65cd996db6-gpnt2
+[GPV]17:46:59.925 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:320) -🔢 HOST_IP: 192.168.54.21
+[GPV]17:46:59.926 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.NcrabCmplnService(NcrabCmplnService.java:112) -
+ ncrab응답 ncrabBodyVo==============>
+ {
+  "kt_message" : {
+    "response_code" : "CHRG0000",
+    "response_message" : "정상적으로 처리되었습니다.",
+    "transaction_id" : "SCIS20251001174659000004",
+    "correlation_id" : null,
+    "product_subscription_list" : null
+  },
+  "Exception" : null
+}
+[GPV]17:46:59.936 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.comn.UcemsService(UcemsService.java:124) -
+ ucems apiPath==============> https://ap.ucems.xyz/CemsLinkage/PICASO/PICASOToUCEMS.asmx
+[GPV]17:46:59.939 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.comn.UcemsService(UcemsService.java:141) -
+ GSMF_LEMS_OSB0001 apiPath==============>
+ https://ap.ucems.xyz/CemsLinkage/PICASO/PICASOToUCEMS.asmx
+[GPV]17:46:59.941 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.comn.UcemsService(UcemsService.java:161) -
+ SL그룹사 ucems 요청=========><?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://www.ktcems.co.kr/CemsLinkage/PICASO">
+        <Header/>
+            <Body>
+                <ns2:IPTVOrderYDProc>
+                    <ns2:hcnIptvBodyData>
+                        <ns2:InPutType>
+                            H</ns2:InPutType>
+                        <ns2:ChangeCode>
+                            4201</ns2:ChangeCode>
+                        <ns2:UpdateTypeCode>
+                            </ns2:UpdateTypeCode>
+                        <ns2:SaID>
+                            SL000001927</ns2:SaID>
+                        <ns2:OdrNum>
+                            SL2527400038589</ns2:OdrNum>
+                        <ns2:OdrSeqNo>
+                            1</ns2:OdrSeqNo>
+                        <ns2:ReceiptDT>
+                            2025-10-01 17:42:01</ns2:ReceiptDT>
+                        <ns2:ConnHopeDT>
+                            2025100117</ns2:ConnHopeDT>
+                        <ns2:MacAddress>
+                            001DEC973B9C</ns2:MacAddress>
+                        <ns2:ModelCode>
+                            K9209343</ns2:ModelCode>
+                        <ns2:Name>
+                            조현*</ns2:Name>
+                        <ns2:ZipCode>
+                            03909</ns2:ZipCode>
+                        <ns2:AddrDong>
+                            303826</ns2:AddrDong>
+                        <ns2:AddrName1>
+                            서울 마포구 매봉산로 45</ns2:AddrName1>
+                        <ns2:OfficeCode>
+                            R00423</ns2:OfficeCode>
+                        <ns2:YnVodOpen>
+                            Y</ns2:YnVodOpen>
+                        <ns2:PinNum>
+                            0000</ns2:PinNum>
+                        <ns2:UsePurposeCode>
+                            1</ns2:UsePurposeCode>
+                        <ns2:AddSvcList>
+                            <ns2:string>
+                                0K01</ns2:string>
+                            </ns2:AddSvcList>
+                        </ns2:hcnIptvBodyData>
+                    </ns2:IPTVOrderYDProc>
+                </Body>
+            </Envelope>
+[GPV]17:46:59.942 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:189) -[post]uri    : https://ap.ucems.xyz/CemsLinkage/PICASO/PICASOToUCEMS.asmx
+[GPV]17:46:59.942 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:190) -[post]header : [Content-Type:"text/xml;charset=UTF-8", SOAPAction:"http://www.ktcems.co.kr/CemsLinkage/PICASO/IPTVOrderYDProc", Host:"ap.ucems.xyz"]
+[GPV]17:46:59.942 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:191) -[post]body   : <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://www.ktcems.co.kr/CemsLinkage/PICASO">
+    <Header/>
+    <Body>
+        <ns2:IPTVOrderYDProc>
+            <ns2:hcnIptvBodyData>
+                <ns2:InPutType>H</ns2:InPutType>
+                <ns2:ChangeCode>4201</ns2:ChangeCode>
+                <ns2:UpdateTypeCode></ns2:UpdateTypeCode>
+                <ns2:SaID>SL000001927</ns2:SaID>
+                <ns2:OdrNum>SL2527400038589</ns2:OdrNum>
+                <ns2:OdrSeqNo>1</ns2:OdrSeqNo>
+                <ns2:ReceiptDT>2025-10-01 17:42:01</ns2:ReceiptDT>
+                <ns2:ConnHopeDT>2025100117</ns2:ConnHopeDT>
+                <ns2:MacAddress>001DEC973B9C</ns2:MacAddress>
+                <ns2:ModelCode>K9209343</ns2:ModelCode>
+                <ns2:Name>조현*</ns2:Name>
+                <ns2:ZipCode>03909</ns2:ZipCode>
+                <ns2:AddrDong>303826</ns2:AddrDong>
+                <ns2:AddrName1>서울 마포구 매봉산로 45</ns2:AddrName1>
+                <ns2:OfficeCode>R00423</ns2:OfficeCode>
+                <ns2:YnVodOpen>Y</ns2:YnVodOpen>
+                <ns2:PinNum>0000</ns2:PinNum>
+                <ns2:UsePurposeCode>1</ns2:UsePurposeCode>
+                <ns2:AddSvcList>
+                    <ns2:string>0K01</ns2:string>
+                </ns2:AddSvcList>
+            </ns2:hcnIptvBodyData>
+        </ns2:IPTVOrderYDProc>
+    </Body>
+</Envelope>
+
+[GPV]17:46:59.963 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.RestCallApiService(RestCallApiService.java:193) -SL그룹사 응답원문   : <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><IPTVOrderYDProcResponse xmlns="http://www.ktcems.co.kr/CemsLinkage/PICASO"><IPTVOrderYDProcResult>1</IPTVOrderYDProcResult></IPTVOrderYDProcResponse></soap:Body></soap:Envelope>
+[GPV]17:46:59.963 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:157) -API 실행 시간: 22ms
+[GPV]17:46:59.964 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:317) -🔢 CONTAINER_NAME: gpv
+[GPV]17:46:59.965 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:318) -🌐 NODE_NAME: picaso.worker01.c01.yz-tb-ocp4.container.kt.co.kr
+[GPV]17:46:59.965 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:319) -📍 POD_NAME: gpv-65cd996db6-gpnt2
+[GPV]17:46:59.965 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggingSend(LoggingSend.java:320) -🔢 HOST_IP: 192.168.54.21
+[GPV]17:46:59.965 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.comn.UcemsService(UcemsService.java:163) -
+ SL그룹사 ucems 응답=========><?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><IPTVOrderYDProcResponse xmlns="http://www.ktcems.co.kr/CemsLinkage/PICASO"><IPTVOrderYDProcResult>1</IPTVOrderYDProcResult></IPTVOrderYDProcResponse></soap:Body></soap:Envelope>
+[GPV]17:46:59.965 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.controller.SoapXmlGenerator(SoapXmlGenerator.java:61) -xmlString 응답==============>
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><IPTVOrderYDProcResponse xmlns="http://www.ktcems.co.kr/CemsLinkage/PICASO"><IPTVOrderYDProcResult>1</IPTVOrderYDProcResult></IPTVOrderYDProcResponse></soap:Body></soap:Envelope>
+[GPV]17:46:59.969 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.controller.SoapXmlGenerator(SoapXmlGenerator.java:75) -envelopeOut 응답==============>[{
+  "body" : {
+    "ipTvOrderYdProcResponse" : {
+      "ipTvOrderYdProcResult" : "1"
+    }
+  }
+}]
+[GPV]17:46:59.969 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.service.cmpln.GpvCmplnService(GpvCmplnService.java:77) -=============saveByCmpln===================
+[GPV]17:47:00.013 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.controller.GpvCmplnController(GpvCmplnController.java:86) -
+ SL그룹사 GPV0102 준공 응답==============> {
+  "responseCode" : "GPV0000",
+  "responseMessage" : "정상적으로 처리 되었습니다",
+  "productCnt" : "0",
+  "productList" : [ ]
+}
+[GPV]17:47:00.013 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:133) ---★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★---
+[GPV]17:47:00.013 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:134) ---★ [SL그룹사 준공완료.GPV0102] PICASO GPV 연동 System Process End [2025-10-01 17:47:00.013]
+[GPV]17:47:00.014 [http-nio-80-exec-1] INFO  com.kt.picaso.gpv.common.util.LoggerUtil(LoggerUtil.java:135) ---★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★---
+[GPV]17:47:00.014 [http-nio-80-exec-1] INFO  com.kt.dpla.support.lamp.aop.LampLogControllerAop(LampLogControllerAop.java:74) -API 실행 시간: 325ms
