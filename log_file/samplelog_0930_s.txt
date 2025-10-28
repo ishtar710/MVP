@@ -1,0 +1,4628 @@
+{
+  "took": 167,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "log_origin-20250930",
+        "_id": "b987lpkB3DsinIFlQ3jp",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:00.467Z",
+          "operation": "GA0104",
+          "timestamp": "2025-09-30 01:07:55.362",
+          "payload": "{\"systemMessage\":\"Success\",\"systemCode\":\"1\",\"responseMessage\":\"Success\",\"responseCode\":\"1\"}",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "url": "https://mein-pv.megatvdnp.co.kr:443/GPV/AddAproduct",
+          "transactionId": "SCIS20250930010755000027",
+          "destination": {
+            "name": "MEIN",
+            "ip": "172.16.6.41"
+          },
+          "processDesc": "{\"productList\":[{\"productCd\":\"2K40\",\"contractYn\":\"N\",\"contractPeriod\":\"EQ0M\",\"expiredDt\":null}],\"svcContId\":\"Vr543drAyBG0hiLT6RyEVg==\",\"svcScrCd\":\"GPV\",\"productCnt\":\"1\"}",
+          "serviceDomain": "GPV",
+          "service": "PG103701",
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "logType": "OUT_RES",
+          "seq": "2",
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "SUCCESS",
+            "duration": "44"
+          },
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.110"
+          },
+          "log": {
+            "offset": 0,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "cN87lpkB3DsinIFlQ3jp",
+        "_score": 1,
+        "_ignored": [
+          "payload.keyword",
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:00.467Z",
+          "operation": "GPV0111",
+          "serviceDomain": "GPV",
+          "seq": "2",
+          "service": "PG103701",
+          "transactionId": "SCIS20250930010755000027",
+          "payload": "{\"productList\":[{\"ncrabSvcContId\":\"\",\"productCd\":\"2K40\",\"productName\":\"넷플릭스 프리미엄(ipit TV)\",\"productSubscriptionStartDateTime\":\"20250930010755\",\"contractYn\":\"N\",\"contractPeriodCd\":\"EQ0M\",\"expiredDate\":null,\"promotionId\":null,\"promotionCd\":null,\"promotionGroupCd\":null,\"notPenaltyYn\":\"N\"}],\"responseCode\":\"GPV0000\",\"responseMessage\":\"정상적으로 처리 되었습니다\",\"transaction_id\":\"SCIS20250930010755000027\",\"productCnt\":\"1\"}",
+          "input": {
+            "type": "log"
+          },
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "container": {
+            "ip": "192.168.124.21",
+            "name": "gpv-864976bb8b-mxmmm"
+          },
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "정상적으로 처리 되었습니다",
+            "duration": "101"
+          },
+          "logType": "IN_RES",
+          "processDesc": "{\"productList\":[{\"ncrabSvcContId\":null,\"productCd\":\"2K40\",\"contractYn\":\"N\",\"contractPeriodCd\":\"EQ0M\",\"expiredDate\":null,\"promotionId\":null,\"promotionCd\":null,\"promotionGroupCd\":null,\"notPenaltyYn\":\"N\",\"upsellingYn\":null}],\"gcode\":\"SL\",\"gsvcContId\":\"2NTexpJC5gUvvp9iujvggA==\",\"orderNumber\":\"SL2527300092248\",\"orderTypeCd\":\"CZ\",\"receiptDateTime\":\"20250930010754\",\"completeDateTime\":\"20250930010755\",\"ktSvcContId\":\"Vr543drAyBG0hiLT6RyEVg==\",\"baseProductCd\":\"0K01\",\"updateTypeCd\":null,\"productCnt\":\"1\"}",
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.110"
+          },
+          "ktSvcContId": "Vr543drAyBG0hiLT6RyEVg==",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            },
+            "offset": 941
+          },
+          "gsvcContId": "2NTexpJC5gUvvp9iujvggA==",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/subscribe/addprod/join",
+          "timestamp": "2025-09-30 01:07:55.401",
+          "ecs": {
+            "version": "8.0.0"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "1Uw7lpkB9y6EhAQWlD7x",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:21.212Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "timestamp": "2025-09-30 01:08:20.508",
+          "log": {
+            "offset": 0,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            }
+          },
+          "payload": "{\"responseMessage\":\"SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "ktSvcContId": "SLT50107001",
+          "logType": "IN_RES",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": ""
+          },
+          "transactionId": "UCEMS20250930010820407",
+          "seq": "2",
+          "serviceDomain": "GPV",
+          "operation": "GPV0201",
+          "service": "PG103701",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107001\",\"orderNumber\":\"SLT50107001\",\"macAddress\":\"001DEC9118FE\",\"activationDateTime\":\"20250820170305\"}"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "cd87lpkB3DsinIFln3jD",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:23.983Z",
+          "input": {
+            "type": "log"
+          },
+          "transactionId": "UCEMS20250930010820407",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "IN_MSG",
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-m7nfz_elk.log"
+            },
+            "offset": 2394
+          },
+          "service": "PG103701",
+          "response": {
+            "desc": "AGW5200",
+            "type": "I",
+            "code": "AGW5200",
+            "duration": "63"
+          },
+          "timestamp": "2025-09-30 01:08:20.502",
+          "operation": "GPV0201",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "ct87lpkB3DsinIFln3jD",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:28.993Z",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "seq": "2",
+          "ktSvcContId": "M4nEqKnzbLpa2z8PIgdPPA==",
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "log": {
+            "offset": 0,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "service": "PG103701",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "response": {
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "1191"
+          },
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "operation": "SL0201",
+          "gsvcContId": "p++50vcM60i9TBRkPFqnAA==",
+          "serviceDomain": "GPV",
+          "transactionId": "UCEMS20250930010820407",
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "timestamp": "2025-09-30 01:08:21.682",
+          "logType": "OUT_RES",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"p++50vcM60i9TBRkPFqnAA==\",\"ktSvcContId\":\"M4nEqKnzbLpa2z8PIgdPPA==\",\"orderNumber\":\"SL2526800086908\",\"activationDateTime\":\"20250925142733\",\"macAddress\":\"ishaaafVtzzeqxETqueOpQ==\"}"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "c987lpkB3DsinIFln3jD",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:28.993Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "IN_RES",
+          "seq": "2",
+          "transactionId": "UCEMS20250930010820407",
+          "service": "PG103701",
+          "processDesc": "{\"ktSvcContId\":\"SL000059001\",\"orderNumber\":\"SL2526800086908\",\"macAddress\":\"001DECA47EAA\",\"activationDateTime\":\"20250925142733\"}",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "1258"
+          },
+          "ktSvcContId": "SL000059001",
+          "operation": "GPV0201",
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "timestamp": "2025-09-30 01:08:21.716",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            },
+            "offset": 1056
+          },
+          "input": {
+            "type": "log"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "serviceDomain": "GPV",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "8Xs7lpkBRSgSPs_VoIse",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:24.074Z",
+          "log": {
+            "offset": 3579,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            }
+          },
+          "operation": "GPV0201",
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "code": "AGW0000",
+            "duration": "1290",
+            "desc": "AGW0000",
+            "type": "I"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "transactionId": "UCEMS20250930010820407",
+          "service": "PG103701",
+          "logType": "IN_MSG",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "timestamp": "2025-09-30 01:08:21.720"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "8ns7lpkBRSgSPs_VoYta",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:24.390Z",
+          "service": "PG103701",
+          "timestamp": "2025-09-30 01:08:20.512",
+          "operation": "GPV0201",
+          "logType": "IN_MSG",
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW5200",
+            "duration": "77",
+            "desc": "AGW5200"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "log": {
+            "offset": 2787,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-gvrbm_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "transactionId": "UCEMS20250930010820407"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "83s7lpkBRSgSPs_VpYuT",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:25.470Z",
+          "input": {
+            "type": "log"
+          },
+          "timestamp": "2025-09-30 01:08:20.500",
+          "payload": "{\"responseMessage\":\"SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107006\",\"orderNumber\":\"SLT50107006\",\"macAddress\":\"001DEC8EC6E2\",\"activationDateTime\":\"20250820172320\"}",
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            },
+            "offset": 2725
+          },
+          "serviceDomain": "GPV",
+          "ktSvcContId": "SLT50107006",
+          "logType": "IN_RES",
+          "seq": "2",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "operation": "GPV0201",
+          "service": "PG103701",
+          "transactionId": "UCEMS20250930010820407",
+          "response": {
+            "code": "GPV2260",
+            "desc": "SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": "",
+            "type": "E"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "dN87lpkB3DsinIFlvHgD",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:31.215Z",
+          "input": {
+            "type": "log"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "logType": "IN_MSG",
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "1287",
+            "desc": "AGW0000"
+          },
+          "operation": "GPV0201",
+          "log": {
+            "offset": 1193,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-6xt87_elk.log"
+            }
+          },
+          "timestamp": "2025-09-30 01:08:21.718",
+          "transactionId": "UCEMS20250930010820407",
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "dd87lpkB3DsinIFlvHgM",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:31.224Z",
+          "input": {
+            "type": "log"
+          },
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "serviceDomain": "GPV",
+          "logType": "OUT_RES",
+          "seq": "2",
+          "service": "PG103701",
+          "transactionId": "UCEMS20250930010820407",
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "timestamp": "2025-09-30 01:08:21.683",
+          "destination": {
+            "ip": "172.16.64.78",
+            "name": "SCIS"
+          },
+          "log": {
+            "offset": 0,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "response": {
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "1200"
+          },
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"7mZUeSkHuRgEJ9Sr6yFb1A==\",\"ktSvcContId\":\"iihchm3nGuIdzaYkQEwA7w==\",\"orderNumber\":\"SL2526900088894\",\"activationDateTime\":\"20250926161445\",\"macAddress\":\"jMftbpHcMdFKwW/uzsKe6Q==\"}",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "gsvcContId": "7mZUeSkHuRgEJ9Sr6yFb1A==",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "ktSvcContId": "iihchm3nGuIdzaYkQEwA7w==",
+          "operation": "SL0201"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "dt87lpkB3DsinIFlvHgM",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:08:31.225Z",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "service": "PG103701",
+          "ktSvcContId": "SL000060405",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "serviceDomain": "GPV",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "operation": "GPV0201",
+          "input": {
+            "type": "log"
+          },
+          "seq": "2",
+          "processDesc": "{\"ktSvcContId\":\"SL000060405\",\"orderNumber\":\"SL2526900088894\",\"macAddress\":\"001DECA4AF18\",\"activationDateTime\":\"20250926161445\"}",
+          "transactionId": "UCEMS20250930010820407",
+          "log": {
+            "offset": 1056,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "1264"
+          },
+          "logType": "IN_RES",
+          "timestamp": "2025-09-30 01:08:21.718"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "1kw_lpkB9y6EhAQWUj4t",
+        "_score": 1,
+        "_ignored": [
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T16:12:26.265Z",
+          "transactionId": "7ca16dc6-9848-426f-af18-83713f480a15",
+          "input": {
+            "type": "log"
+          },
+          "caller": {
+            "channel": "MEIN",
+            "channelIp": "172.16.49.102"
+          },
+          "serviceDomain": "GPV",
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"nuHBnlP8d9PKsUje7pf70A==\",\"ktSvcContId\":\"//d+D4xrzZiwHajSY6llVA==\",\"orderNumber\":\"20250930011221\",\"orderSeqNumber\":\"1\",\"receiptDate\":\"20250930011221\",\"contactRoute\":\"01\",\"productCnt\":\"1\",\"productList\":[{\"ncrabSvcContId\":\"\",\"chgCode\":\"33\",\"productCd\":\"2K43\",\"productName\":\"무비초이스액션(ipit TV)\",\"promotionYn\":null,\"promotionMmCnt\":\"\",\"contractPeriodCd\":\"EQ0M\",\"mobileNo\":\"\",\"productSubscriptionEndDateTime\":null}]}",
+          "gsvcContId": "nuHBnlP8d9PKsUje7pf70A==",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "seq": "2",
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "SUCCESS",
+            "duration": "590"
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/subscribe/onscreen",
+          "timestamp": "2025-09-30 01:12:22.319",
+          "log": {
+            "offset": 2048,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "logType": "OUT_RES",
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "service": "PG103701",
+          "operation": "SL1102",
+          "payload": "{\"responseCode\":\"SCIS0000\",\"responseMessage\":\"정상적으로 처리 되었습니다.\",\"gcode\":\"SL\",\"gsvcContId\":\"nuHBnlP8d9PKsUje7pf70A==\",\"productCnt\":\"1\",\"productList\":[{\"productCd\":\"2K43\",\"productName\":\"무비초이스액션(ipit TV)\"}]}",
+          "ktSvcContId": "//d+D4xrzZiwHajSY6llVA=="
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "10w_lpkB9y6EhAQWUj4t",
+        "_score": 1,
+        "_ignored": [
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T16:12:26.265Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "transactionId": "7ca16dc6-9848-426f-af18-83713f480a15",
+          "logType": "IN_RES",
+          "payload": "{\"responseCode\":\"GPV0000\",\"responseMessage\":\"정상적으로 처리 되었습니다\"}",
+          "response": {
+            "duration": "646",
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "정상적으로 처리 되었습니다"
+          },
+          "processDesc": "{\"ktSvcContId\":\"//d+D4xrzZiwHajSY6llVA==\",\"orderNumber\":\"20250930011221\",\"orderSeqNumber\":\"1\",\"receiptDate\":\"20250930011221\",\"contactRoute\":\"01\",\"productCnt\":\"1\",\"productList\":[{\"ncrabSvcContId\":\" \",\"chgCode\":\"33\",\"productCd\":\"2K43\",\"productName\":\"무비초이스액션(ipitTV)\",\"promotionYn\":null,\"promotionMmCnt\":\"\",\"contractPeriodCd\":\"\",\"mobileNo\":\"\",\"productSubscriptionEndDateTime\":null}]}",
+          "log": {
+            "offset": 3574,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "input": {
+            "type": "log"
+          },
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "caller": {
+            "channel": "MEIN",
+            "channelIp": "172.16.49.102"
+          },
+          "timestamp": "2025-09-30 01:12:22.349",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/subscribe/onscreen",
+          "serviceDomain": "GPV",
+          "seq": "2",
+          "service": "PG103701",
+          "ktSvcContId": "//d+D4xrzZiwHajSY6llVA==",
+          "operation": "GPV1102"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "ed9NlpkB3DsinIFl5njq",
+        "_score": 1,
+        "_ignored": [
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:21.846Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "input": {
+            "type": "log"
+          },
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "gsvcContId": "k24XKYA5Rh5pCOTtyxViXw==",
+          "serviceDomain": "GPV",
+          "payload": "{\"responseCode\":\"SCIS0000\",\"responseMessage\":\"정상적으로 처리 되었습니다.\",\"gcode\":\"SL\",\"gsvcContId\":\"k24XKYA5Rh5pCOTtyxViXw==\",\"productCnt\":\"1\",\"productList\":[{\"productCd\":\"2K14\",\"productName\":\"PlayboyTV(ipit TV)\"}]}",
+          "caller": {
+            "channel": "MEIN",
+            "channelIp": "172.16.49.112"
+          },
+          "operation": "SL1102",
+          "service": "PG103701",
+          "logType": "OUT_RES",
+          "seq": "2",
+          "ktSvcContId": "XHDeVmpCLHEJ1RClLuaYCA==",
+          "log": {
+            "offset": 6850,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/subscribe/onscreen",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"k24XKYA5Rh5pCOTtyxViXw==\",\"ktSvcContId\":\"XHDeVmpCLHEJ1RClLuaYCA==\",\"orderNumber\":\"20250930012820\",\"orderSeqNumber\":\"1\",\"receiptDate\":\"20250930012820\",\"contactRoute\":\"01\",\"productCnt\":\"1\",\"productList\":[{\"ncrabSvcContId\":\"\",\"chgCode\":\"33\",\"productCd\":\"2K14\",\"productName\":\"PlayboyTV(ipit TV)\",\"promotionYn\":null,\"promotionMmCnt\":\"\",\"contractPeriodCd\":\"EQ3M\",\"mobileNo\":\"\",\"productSubscriptionEndDateTime\":null}]}",
+          "transactionId": "26a6dfa7-f99c-4f7d-bd54-29086518f37f",
+          "response": {
+            "desc": "SUCCESS",
+            "duration": "384",
+            "type": "I",
+            "code": "GPV0000"
+          },
+          "timestamp": "2025-09-30 01:28:21.171"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "et9NlpkB3DsinIFl5njq",
+        "_score": 1,
+        "_ignored": [
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:21.846Z",
+          "operation": "GPV1102",
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "정상적으로 처리 되었습니다",
+            "duration": "442"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/subscribe/onscreen",
+          "transactionId": "26a6dfa7-f99c-4f7d-bd54-29086518f37f",
+          "timestamp": "2025-09-30 01:28:21.203",
+          "input": {
+            "type": "log"
+          },
+          "caller": {
+            "channel": "MEIN",
+            "channelIp": "172.16.49.112"
+          },
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "seq": "2",
+          "payload": "{\"responseCode\":\"GPV0000\",\"responseMessage\":\"정상적으로 처리 되었습니다\"}",
+          "serviceDomain": "GPV",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "processDesc": "{\"ktSvcContId\":\"XHDeVmpCLHEJ1RClLuaYCA==\",\"orderNumber\":\"20250930012820\",\"orderSeqNumber\":\"1\",\"receiptDate\":\"20250930012820\",\"contactRoute\":\"01\",\"productCnt\":\"1\",\"productList\":[{\"ncrabSvcContId\":\" \",\"chgCode\":\"33\",\"productCd\":\"2K14\",\"productName\":\"PlayboyTV(Skylife IP-위성)\",\"promotionYn\":null,\"promotionMmCnt\":\"\",\"contractPeriodCd\":\"EQ3M\",\"mobileNo\":\"\",\"productSubscriptionEndDateTime\":null}]}",
+          "container": {
+            "ip": "192.168.126.28",
+            "name": "gpv-864976bb8b-nm2k7"
+          },
+          "logType": "IN_RES",
+          "ktSvcContId": "XHDeVmpCLHEJ1RClLuaYCA==",
+          "service": "PG103701",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            },
+            "offset": 8352
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "e99NlpkB3DsinIFl8HiG",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:24.307Z",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            },
+            "offset": 4774
+          },
+          "caller": {
+            "channel": "MEIN",
+            "channelIp": "172.16.49.112"
+          },
+          "input": {
+            "type": "log"
+          },
+          "transactionId": "26a6dfa7-f99c-4f7d-bd54-29086518f37f",
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "464",
+            "desc": "AGW0000"
+          },
+          "operation": "GPV1102",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "timestamp": "2025-09-30 01:28:21.205",
+          "url": "https://api.picaso.kt.co.kr/picaso/subscribe/onscreen",
+          "service": "PG103701",
+          "logType": "IN_MSG"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "fN9OlpkB3DsinIFlCnjB",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:31.019Z",
+          "service": "PG103701",
+          "processDesc": "{\"productList\":[{\"productCd\":\"2K14\",\"contractYn\":\"Y\",\"contractPeriod\":\"EQ3M\",\"expiredDt\":null}],\"svcContId\":\"XHDeVmpCLHEJ1RClLuaYCA==\",\"svcScrCd\":\"GPV\",\"productCnt\":\"1\"}",
+          "timestamp": "2025-09-30 01:28:21.105",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "response": {
+            "desc": "SUCCESS",
+            "duration": "38",
+            "type": "I",
+            "code": "GPV0000"
+          },
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.110"
+          },
+          "destination": {
+            "name": "MEIN",
+            "ip": "172.16.6.41"
+          },
+          "logType": "OUT_RES",
+          "transactionId": "SCIS20250930012821000043",
+          "payload": "{\"systemMessage\":\"Success\",\"systemCode\":\"1\",\"responseMessage\":\"Success\",\"responseCode\":\"1\"}",
+          "log": {
+            "offset": 6393,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "url": "https://mein-pv.megatvdnp.co.kr:443/GPV/AddAproduct",
+          "serviceDomain": "GPV",
+          "seq": "2",
+          "operation": "GA0104",
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "fd9OlpkB3DsinIFlCnjB",
+        "_score": 1,
+        "_ignored": [
+          "payload.keyword",
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:31.019Z",
+          "transactionId": "SCIS20250930012821000043",
+          "processDesc": "{\"productList\":[{\"ncrabSvcContId\":null,\"productCd\":\"2K14\",\"contractYn\":\"Y\",\"contractPeriodCd\":\"EQ3M\",\"expiredDate\":null,\"promotionId\":null,\"promotionCd\":null,\"promotionGroupCd\":null,\"notPenaltyYn\":\"N\",\"upsellingYn\":null}],\"gcode\":\"SL\",\"gsvcContId\":\"k24XKYA5Rh5pCOTtyxViXw==\",\"orderNumber\":\"SL2527300092252\",\"orderTypeCd\":\"CZ\",\"receiptDateTime\":\"20250930012820\",\"completeDateTime\":\"20250930012820\",\"ktSvcContId\":\"XHDeVmpCLHEJ1RClLuaYCA==\",\"baseProductCd\":\"0K02\",\"updateTypeCd\":null,\"productCnt\":\"1\"}",
+          "timestamp": "2025-09-30 01:28:21.139",
+          "operation": "GPV0111",
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "desc": "정상적으로 처리 되었습니다",
+            "duration": "88",
+            "type": "I",
+            "code": "GPV0000"
+          },
+          "seq": "2",
+          "gsvcContId": "k24XKYA5Rh5pCOTtyxViXw==",
+          "serviceDomain": "GPV",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "payload": "{\"productList\":[{\"ncrabSvcContId\":\"\",\"productCd\":\"2K14\",\"productName\":\"PlayboyTV(ipit TV)\",\"productSubscriptionStartDateTime\":\"20250930012820\",\"contractYn\":\"Y\",\"contractPeriodCd\":\"EQ3M\",\"expiredDate\":null,\"promotionId\":null,\"promotionCd\":null,\"promotionGroupCd\":null,\"notPenaltyYn\":\"N\"}],\"responseCode\":\"GPV0000\",\"responseMessage\":\"정상적으로 처리 되었습니다\",\"transaction_id\":\"SCIS20250930012821000043\",\"productCnt\":\"1\"}",
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "logType": "IN_RES",
+          "service": "PG103701",
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.110"
+          },
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/subscribe/addprod/join",
+          "ktSvcContId": "XHDeVmpCLHEJ1RClLuaYCA==",
+          "log": {
+            "offset": 7334,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            }
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "-XtOlpkBRSgSPs_VK4si",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:39.310Z",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "log": {
+            "offset": 5184,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "transactionId": "UCEMS20250930012838985",
+          "logType": "IN_MSG",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "timestamp": "2025-09-30 01:28:39.054",
+          "operation": "GPV0201",
+          "response": {
+            "code": "AGW5200",
+            "duration": "51",
+            "desc": "AGW5200",
+            "type": "I"
+          },
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "-ntOlpkBRSgSPs_VK4si",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:39.311Z",
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW5200",
+            "duration": "56",
+            "desc": "AGW5200"
+          },
+          "transactionId": "UCEMS20250930012838985",
+          "operation": "GPV0201",
+          "logType": "IN_MSG",
+          "log": {
+            "offset": 5581,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "timestamp": "2025-09-30 01:28:39.063",
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "ft9OlpkB3DsinIFlK3jG",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:39.473Z",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": ""
+          },
+          "seq": "2",
+          "log": {
+            "offset": 4095,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "ktSvcContId": "SLT50107006",
+          "serviceDomain": "GPV",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107006\",\"orderNumber\":\"SLT50107006\",\"macAddress\":\"001DEC8EC6E2\",\"activationDateTime\":\"20250820172320\"}",
+          "service": "PG103701",
+          "transactionId": "UCEMS20250930012838985",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "timestamp": "2025-09-30 01:28:39.061",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "operation": "GPV0201",
+          "input": {
+            "type": "log"
+          },
+          "payload": "{\"responseMessage\":\"SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "logType": "IN_RES",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "f99OlpkB3DsinIFlK3jG",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:39.473Z",
+          "log": {
+            "offset": 5043,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "service": "PG103701",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "serviceDomain": "GPV",
+          "ktSvcContId": "M4nEqKnzbLpa2z8PIgdPPA==",
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "timestamp": "2025-09-30 01:28:39.442",
+          "seq": "2",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "response": {
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "388",
+            "type": "E"
+          },
+          "gsvcContId": "p++50vcM60i9TBRkPFqnAA==",
+          "transactionId": "UCEMS20250930012838985",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"p++50vcM60i9TBRkPFqnAA==\",\"ktSvcContId\":\"M4nEqKnzbLpa2z8PIgdPPA==\",\"orderNumber\":\"SL2526800086908\",\"activationDateTime\":\"20250925142733\",\"macAddress\":\"ishaaafVtzzeqxETqueOpQ==\"}",
+          "operation": "SL0201",
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "logType": "OUT_RES"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "gN9OlpkB3DsinIFlK3jG",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:39.474Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "logType": "OUT_RES",
+          "gsvcContId": "7mZUeSkHuRgEJ9Sr6yFb1A==",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            },
+            "offset": 6098
+          },
+          "operation": "SL0201",
+          "timestamp": "2025-09-30 01:28:39.447",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "ktSvcContId": "iihchm3nGuIdzaYkQEwA7w==",
+          "transactionId": "UCEMS20250930012838970",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "input": {
+            "type": "log"
+          },
+          "seq": "2",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"7mZUeSkHuRgEJ9Sr6yFb1A==\",\"ktSvcContId\":\"iihchm3nGuIdzaYkQEwA7w==\",\"orderNumber\":\"SL2526900088894\",\"activationDateTime\":\"20250926161445\",\"macAddress\":\"jMftbpHcMdFKwW/uzsKe6Q==\"}",
+          "response": {
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "0"
+          },
+          "serviceDomain": "GPV",
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "gd9OlpkB3DsinIFlK3jG",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:39.474Z",
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "444"
+          },
+          "log": {
+            "offset": 7151,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "transactionId": "UCEMS20250930012838985",
+          "processDesc": "{\"ktSvcContId\":\"SL000059001\",\"orderNumber\":\"SL2526800086908\",\"macAddress\":\"001DECA47EAA\",\"activationDateTime\":\"20250925142733\"}",
+          "ktSvcContId": "SL000059001",
+          "timestamp": "2025-09-30 01:28:39.470",
+          "operation": "GPV0201",
+          "input": {
+            "type": "log"
+          },
+          "logType": "IN_RES",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "serviceDomain": "GPV",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "seq": "2",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "gt9OlpkB3DsinIFlK3jG",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:40.474Z",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "454"
+          },
+          "processDesc": "{\"ktSvcContId\":\"SL000060405\",\"orderNumber\":\"SL2526900088894\",\"macAddress\":\"001DECA4AF18\",\"activationDateTime\":\"20250926161445\"}",
+          "ktSvcContId": "SL000060405",
+          "transactionId": "UCEMS20250930012838970",
+          "serviceDomain": "GPV",
+          "timestamp": "2025-09-30 01:28:39.475",
+          "logType": "IN_RES",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "seq": "2",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "log": {
+            "offset": 8142,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "service": "PG103701",
+          "operation": "GPV0201",
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "-3tOlpkBRSgSPs_VP4vV",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:44.607Z",
+          "logType": "IN_MSG",
+          "service": "PG103701",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "transactionId": "UCEMS20250930012838985",
+          "log": {
+            "offset": 3986,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-gvrbm_elk.log"
+            }
+          },
+          "operation": "GPV0201",
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "input": {
+            "type": "log"
+          },
+          "timestamp": "2025-09-30 01:28:39.472",
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "453",
+            "desc": "AGW0000"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "_HtOlpkBRSgSPs_VP4vV",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:44.608Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "service": "PG103701",
+          "timestamp": "2025-09-30 01:28:39.477",
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "operation": "GPV0201",
+          "transactionId": "UCEMS20250930012838970",
+          "logType": "IN_MSG",
+          "log": {
+            "offset": 4384,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-gvrbm_elk.log"
+            }
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "476",
+            "desc": "AGW0000"
+          },
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "40xOlpkB9y6EhAQWSD6a",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:46.852Z",
+          "transactionId": "UCEMS20250930012838985",
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "ktSvcContId": "SLT50107001",
+          "payload": "{\"responseMessage\":\"SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": ""
+          },
+          "input": {
+            "type": "log"
+          },
+          "processDesc": "{\"ktSvcContId\":\"SLT50107001\",\"orderNumber\":\"SLT50107001\",\"macAddress\":\"001DEC9118FE\",\"activationDateTime\":\"20250820170305\"}",
+          "logType": "IN_RES",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "operation": "GPV0201",
+          "seq": "2",
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "timestamp": "2025-09-30 01:28:39.052",
+          "service": "PG103701",
+          "log": {
+            "offset": 9584,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "serviceDomain": "GPV"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "43sWlpkBRSgSPs_VYov3",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:27:43.586Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "operation": "GPV0201",
+          "service": "PG103701",
+          "timestamp": "2025-09-30 00:27:42.552",
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "desc": "AGW5200",
+            "type": "I",
+            "code": "AGW5200",
+            "duration": "57"
+          },
+          "logType": "IN_MSG",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "transactionId": "UCEMS20250930002742472",
+          "log": {
+            "offset": 1594,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-gvrbm_elk.log"
+            }
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "5HsWlpkBRSgSPs_Vcov9",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:27:47.687Z",
+          "operation": "GPV0201",
+          "response": {
+            "duration": "1085",
+            "desc": "AGW0000",
+            "type": "I",
+            "code": "AGW0000"
+          },
+          "logType": "IN_MSG",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-m7nfz_elk.log"
+            },
+            "offset": 0
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "transactionId": "UCEMS20250930002742456",
+          "timestamp": "2025-09-30 00:27:43.566",
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "input": {
+            "type": "log"
+          },
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "5XsWlpkBRSgSPs_Vcov9",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:27:47.688Z",
+          "timestamp": "2025-09-30 00:27:42.549",
+          "operation": "GPV0201",
+          "transactionId": "UCEMS20250930002742472",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107001\",\"orderNumber\":\"SLT50107001\",\"macAddress\":\"001DEC9118FE\",\"activationDateTime\":\"20250820170305\"}",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            },
+            "offset": 2048
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "ktSvcContId": "SLT50107001",
+          "seq": "2",
+          "payload": "{\"responseMessage\":\"SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "logType": "IN_RES",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "service": "PG103701",
+          "input": {
+            "type": "log"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "serviceDomain": "GPV",
+          "response": {
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": ""
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "5nsWlpkBRSgSPs_Vcov9",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:27:47.688Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "response": {
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "997"
+          },
+          "ktSvcContId": "iihchm3nGuIdzaYkQEwA7w==",
+          "seq": "2",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            },
+            "offset": 2996
+          },
+          "service": "PG103701",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"7mZUeSkHuRgEJ9Sr6yFb1A==\",\"ktSvcContId\":\"iihchm3nGuIdzaYkQEwA7w==\",\"orderNumber\":\"SL2526900088894\",\"activationDateTime\":\"20250926161445\",\"macAddress\":\"jMftbpHcMdFKwW/uzsKe6Q==\"}",
+          "timestamp": "2025-09-30 00:27:43.533",
+          "input": {
+            "type": "log"
+          },
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "gsvcContId": "7mZUeSkHuRgEJ9Sr6yFb1A==",
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "serviceDomain": "GPV",
+          "operation": "SL0201",
+          "transactionId": "UCEMS20250930002742456",
+          "logType": "OUT_RES",
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "53sWlpkBRSgSPs_Vcov9",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:27:47.688Z",
+          "timestamp": "2025-09-30 00:27:43.564",
+          "transactionId": "UCEMS20250930002742456",
+          "logType": "IN_RES",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "seq": "2",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "processDesc": "{\"ktSvcContId\":\"SL000060405\",\"orderNumber\":\"SL2526900088894\",\"macAddress\":\"001DECA4AF18\",\"activationDateTime\":\"20250926161445\"}",
+          "serviceDomain": "GPV",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "operation": "GPV0201",
+          "log": {
+            "offset": 4051,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "service": "PG103701",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "ktSvcContId": "SL000060405",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "1062"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "wkwWlpkB9y6EhAQWeT7f",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:27:49.450Z",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"p++50vcM60i9TBRkPFqnAA==\",\"ktSvcContId\":\"M4nEqKnzbLpa2z8PIgdPPA==\",\"orderNumber\":\"SL2526800086908\",\"activationDateTime\":\"20250925142733\",\"macAddress\":\"ishaaafVtzzeqxETqueOpQ==\"}",
+          "response": {
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "1003"
+          },
+          "service": "PG103701",
+          "ktSvcContId": "M4nEqKnzbLpa2z8PIgdPPA==",
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "serviceDomain": "GPV",
+          "timestamp": "2025-09-30 00:27:43.535",
+          "seq": "2",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            },
+            "offset": 1896
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "transactionId": "UCEMS20250930002742456",
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "gsvcContId": "p++50vcM60i9TBRkPFqnAA==",
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "OUT_RES",
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "operation": "SL0201",
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "w0wWlpkB9y6EhAQWeT7f",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:27:49.450Z",
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "logType": "IN_RES",
+          "transactionId": "UCEMS20250930002742456",
+          "serviceDomain": "GPV",
+          "processDesc": "{\"ktSvcContId\":\"SL000059001\",\"orderNumber\":\"SL2526800086908\",\"macAddress\":\"001DECA47EAA\",\"activationDateTime\":\"20250925142733\"}",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "1062"
+          },
+          "ktSvcContId": "SL000059001",
+          "operation": "GPV0201",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "input": {
+            "type": "log"
+          },
+          "service": "PG103701",
+          "timestamp": "2025-09-30 00:27:43.563",
+          "seq": "2",
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "log": {
+            "offset": 2952,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            }
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "aN8WlpkB3DsinIFlfHgp",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:27:50.037Z",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107006\",\"orderNumber\":\"SLT50107006\",\"macAddress\":\"001DEC8EC6E2\",\"activationDateTime\":\"20250820172320\"}",
+          "serviceDomain": "GPV",
+          "operation": "GPV0201",
+          "seq": "2",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "logType": "IN_RES",
+          "ktSvcContId": "SLT50107006",
+          "response": {
+            "desc": "SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": "",
+            "type": "E",
+            "code": "GPV2260"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "timestamp": "2025-09-30 00:27:42.554",
+          "service": "PG103701",
+          "log": {
+            "offset": 4095,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "payload": "{\"responseMessage\":\"SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "transactionId": "UCEMS20250930002742456",
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "xEwWlpkB9y6EhAQWfj5G",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:27:50.578Z",
+          "timestamp": "2025-09-30 00:27:43.566",
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "1081",
+            "desc": "AGW0000"
+          },
+          "operation": "GPV0201",
+          "log": {
+            "offset": 794,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-6xt87_elk.log"
+            }
+          },
+          "service": "PG103701",
+          "transactionId": "UCEMS20250930002742456",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "IN_MSG",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "bt8ylpkB3DsinIFlUngd",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:58:14.281Z",
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "1045",
+            "desc": "AGW0000"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "service": "PG103701",
+          "timestamp": "2025-09-30 00:58:12.250",
+          "logType": "IN_MSG",
+          "transactionId": "UCEMS20250930005811174",
+          "log": {
+            "offset": 2388,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-gvrbm_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "operation": "GPV0201"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "63sylpkBRSgSPs_VY4uS",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:58:18.749Z",
+          "response": {
+            "code": "AGW5200",
+            "duration": "60",
+            "desc": "AGW5200",
+            "type": "I"
+          },
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "IN_MSG",
+          "operation": "GPV0201",
+          "log": {
+            "offset": 1197,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-m7nfz_elk.log"
+            }
+          },
+          "transactionId": "UCEMS20250930005811189",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "timestamp": "2025-09-30 00:58:11.281",
+          "service": "PG103701",
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "7HsylpkBRSgSPs_VY4uS",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:58:18.749Z",
+          "log": {
+            "offset": 1594,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-m7nfz_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "input": {
+            "type": "log"
+          },
+          "logType": "IN_MSG",
+          "operation": "GPV0201",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "transactionId": "UCEMS20250930005811174",
+          "timestamp": "2025-09-30 00:58:12.251",
+          "service": "PG103701",
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "1034",
+            "desc": "AGW0000"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "0kwylpkB9y6EhAQWaT5D",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:58:20.206Z",
+          "log": {
+            "offset": 6940,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "transactionId": "UCEMS20250930005811174",
+          "container": {
+            "ip": "192.168.124.21",
+            "name": "gpv-864976bb8b-mxmmm"
+          },
+          "timestamp": "2025-09-30 00:58:12.218",
+          "input": {
+            "type": "log"
+          },
+          "seq": "2",
+          "operation": "SL0201",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"p++50vcM60i9TBRkPFqnAA==\",\"ktSvcContId\":\"M4nEqKnzbLpa2z8PIgdPPA==\",\"orderNumber\":\"SL2526800086908\",\"activationDateTime\":\"20250925142733\",\"macAddress\":\"ishaaafVtzzeqxETqueOpQ==\"}",
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "service": "PG103701",
+          "serviceDomain": "GPV",
+          "logType": "OUT_RES",
+          "gsvcContId": "p++50vcM60i9TBRkPFqnAA==",
+          "ktSvcContId": "M4nEqKnzbLpa2z8PIgdPPA==",
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "response": {
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "954"
+          },
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "00wylpkB9y6EhAQWaT5D",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:58:20.206Z",
+          "service": "PG103701",
+          "timestamp": "2025-09-30 00:58:12.249",
+          "transactionId": "UCEMS20250930005811174",
+          "logType": "IN_RES",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "1014"
+          },
+          "serviceDomain": "GPV",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "processDesc": "{\"ktSvcContId\":\"SL000059001\",\"orderNumber\":\"SL2526800086908\",\"macAddress\":\"001DECA47EAA\",\"activationDateTime\":\"20250925142733\"}",
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            },
+            "offset": 7995
+          },
+          "input": {
+            "type": "log"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "operation": "GPV0201",
+          "ktSvcContId": "SL000059001",
+          "seq": "2"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "7XsylpkBRSgSPs_VbIsK",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:58:20.918Z",
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "log": {
+            "offset": 6939,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "transactionId": "UCEMS20250930005811174",
+          "gsvcContId": "7mZUeSkHuRgEJ9Sr6yFb1A==",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"7mZUeSkHuRgEJ9Sr6yFb1A==\",\"ktSvcContId\":\"iihchm3nGuIdzaYkQEwA7w==\",\"orderNumber\":\"SL2526900088894\",\"activationDateTime\":\"20250926161445\",\"macAddress\":\"jMftbpHcMdFKwW/uzsKe6Q==\"}",
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "serviceDomain": "GPV",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "logType": "OUT_RES",
+          "operation": "SL0201",
+          "service": "PG103701",
+          "response": {
+            "desc": "FAIL",
+            "duration": "961",
+            "type": "E",
+            "code": "SCIS9000"
+          },
+          "timestamp": "2025-09-30 00:58:12.217",
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "ktSvcContId": "iihchm3nGuIdzaYkQEwA7w==",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "seq": "2"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "7nsylpkBRSgSPs_VbIsK",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:58:20.918Z",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "response": {
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "1023",
+            "type": "E",
+            "code": "GPV2257"
+          },
+          "operation": "GPV0201",
+          "processDesc": "{\"ktSvcContId\":\"SL000060405\",\"orderNumber\":\"SL2526900088894\",\"macAddress\":\"001DECA4AF18\",\"activationDateTime\":\"20250926161445\"}",
+          "transactionId": "UCEMS20250930005811174",
+          "seq": "2",
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "timestamp": "2025-09-30 00:58:12.248",
+          "log": {
+            "offset": 7994,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "IN_RES",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "serviceDomain": "GPV",
+          "service": "PG103701",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "ktSvcContId": "SL000060405",
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "73sylpkBRSgSPs_VbIuQ",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:58:21.051Z",
+          "input": {
+            "type": "log"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "ktSvcContId": "SLT50107006",
+          "transactionId": "UCEMS20250930005811189",
+          "response": {
+            "duration": "",
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다."
+          },
+          "operation": "GPV0201",
+          "logType": "IN_RES",
+          "timestamp": "2025-09-30 00:58:11.278",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "seq": "2",
+          "serviceDomain": "GPV",
+          "service": "PG103701",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "log": {
+            "offset": 4891,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            }
+          },
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "payload": "{\"responseMessage\":\"SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107006\",\"orderNumber\":\"SLT50107006\",\"macAddress\":\"001DEC8EC6E2\",\"activationDateTime\":\"20250820172320\"}"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "8HsylpkBRSgSPs_VbIuQ",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:58:21.051Z",
+          "seq": "2",
+          "logType": "IN_RES",
+          "payload": "{\"responseMessage\":\"SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "serviceDomain": "GPV",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107001\",\"orderNumber\":\"SLT50107001\",\"macAddress\":\"001DEC9118FE\",\"activationDateTime\":\"20250820170305\"}",
+          "transactionId": "UCEMS20250930005811189",
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "ktSvcContId": "SLT50107001",
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "log": {
+            "offset": 5839,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            }
+          },
+          "service": "PG103701",
+          "response": {
+            "duration": "",
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다."
+          },
+          "operation": "GPV0201",
+          "timestamp": "2025-09-30 00:58:11.278",
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "9Hs_lpkBRSgSPs_VXIvb",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:12:28.999Z",
+          "input": {
+            "type": "log"
+          },
+          "transactionId": "7ca16dc6-9848-426f-af18-83713f480a15",
+          "operation": "GPV1102",
+          "timestamp": "2025-09-30 01:12:22.350",
+          "log": {
+            "offset": 2791,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-m7nfz_elk.log"
+            }
+          },
+          "service": "PG103701",
+          "url": "https://api.picaso.kt.co.kr/picaso/subscribe/onscreen",
+          "caller": {
+            "channel": "MEIN",
+            "channelIp": "172.16.49.102"
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "670",
+            "desc": "AGW0000"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "IN_MSG"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "2Ew_lpkB9y6EhAQWXj54",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:12:29.412Z",
+          "response": {
+            "duration": "108",
+            "desc": "AGW0000",
+            "type": "I",
+            "code": "AGW0000"
+          },
+          "operation": "GPV0111",
+          "service": "PG103701",
+          "logType": "IN_MSG",
+          "caller": {
+            "channelIp": "61.78.32.109",
+            "channel": "SCIS"
+          },
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-gvrbm_elk.log"
+            },
+            "offset": 3184
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "transactionId": "SCIS20250930011222000030",
+          "timestamp": "2025-09-30 01:12:22.292",
+          "url": "https://api.picaso.kt.co.kr/picaso/subscribe/addprod/join",
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "2Uw_lpkB9y6EhAQWYj7E",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:12:30.510Z",
+          "service": "PG103701",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "transactionId": "SCIS20250930011222000030",
+          "processDesc": "{\"productList\":[{\"productCd\":\"2K43\",\"contractYn\":\"N\",\"contractPeriod\":\"EQ0M\",\"expiredDt\":null}],\"svcContId\":\"//d+D4xrzZiwHajSY6llVA==\",\"svcScrCd\":\"GPV\",\"productCnt\":\"1\"}",
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "SUCCESS",
+            "duration": "41"
+          },
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "timestamp": "2025-09-30 01:12:22.256",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            },
+            "offset": 3673
+          },
+          "destination": {
+            "name": "MEIN",
+            "ip": "172.16.6.41"
+          },
+          "url": "https://mein-pv.megatvdnp.co.kr:443/GPV/AddAproduct",
+          "operation": "GA0104",
+          "payload": "{\"systemMessage\":\"Success\",\"systemCode\":\"1\",\"responseMessage\":\"Success\",\"responseCode\":\"1\"}",
+          "input": {
+            "type": "log"
+          },
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.109"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "seq": "2",
+          "serviceDomain": "GPV",
+          "logType": "OUT_RES"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "2kw_lpkB9y6EhAQWYj7E",
+        "_score": 1,
+        "_ignored": [
+          "payload.keyword",
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T16:12:30.510Z",
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.109"
+          },
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "ktSvcContId": "//d+D4xrzZiwHajSY6llVA==",
+          "processDesc": "{\"productList\":[{\"ncrabSvcContId\":null,\"productCd\":\"2K43\",\"contractYn\":\"N\",\"contractPeriodCd\":\"EQ0M\",\"expiredDate\":null,\"promotionId\":null,\"promotionCd\":null,\"promotionGroupCd\":null,\"notPenaltyYn\":\"N\",\"upsellingYn\":null}],\"gcode\":\"SL\",\"gsvcContId\":\"nuHBnlP8d9PKsUje7pf70A==\",\"orderNumber\":\"SL2527300092249\",\"orderTypeCd\":\"CZ\",\"receiptDateTime\":\"20250930011221\",\"completeDateTime\":\"20250930011221\",\"ktSvcContId\":\"//d+D4xrzZiwHajSY6llVA==\",\"baseProductCd\":\"0K01\",\"updateTypeCd\":null,\"productCnt\":\"1\"}",
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "정상적으로 처리 되었습니다",
+            "duration": "89"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/subscribe/addprod/join",
+          "service": "PG103701",
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "operation": "GPV0111",
+          "gsvcContId": "nuHBnlP8d9PKsUje7pf70A==",
+          "log": {
+            "offset": 4614,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            }
+          },
+          "payload": "{\"productList\":[{\"ncrabSvcContId\":\"\",\"productCd\":\"2K43\",\"productName\":\"무비초이스액션(ipit TV)\",\"productSubscriptionStartDateTime\":\"20250930011221\",\"contractYn\":\"N\",\"contractPeriodCd\":\"EQ0M\",\"expiredDate\":null,\"promotionId\":null,\"promotionCd\":null,\"promotionGroupCd\":null,\"notPenaltyYn\":\"N\"}],\"responseCode\":\"GPV0000\",\"responseMessage\":\"정상적으로 처리 되었습니다\",\"transaction_id\":\"SCIS20250930011222000030\",\"productCnt\":\"1\"}",
+          "serviceDomain": "GPV",
+          "transactionId": "SCIS20250930011222000030",
+          "logType": "IN_RES",
+          "timestamp": "2025-09-30 01:12:22.290",
+          "seq": "2"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "9XtAlpkBRSgSPs_V7It8",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:14:11.304Z",
+          "transactionId": "SCIS20250930011409000040",
+          "seq": "2",
+          "serviceDomain": "GPV",
+          "log": {
+            "offset": 948,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            }
+          },
+          "operation": "GA0104",
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.109"
+          },
+          "url": "https://mein-pv.megatvdnp.co.kr:443/GPV/AddAproduct",
+          "logType": "OUT_RES",
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "SUCCESS",
+            "duration": "38"
+          },
+          "timestamp": "2025-09-30 01:14:09.276",
+          "destination": {
+            "name": "MEIN",
+            "ip": "172.16.6.41"
+          },
+          "input": {
+            "type": "log"
+          },
+          "service": "PG103701",
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "processDesc": "{\"productList\":[{\"productCd\":\"2K40\",\"contractYn\":\"N\",\"contractPeriod\":\"EQ0M\",\"expiredDt\":null}],\"svcContId\":\"8o7Pcp667t1XqUNpkOk4Kw==\",\"svcScrCd\":\"GPV\",\"productCnt\":\"1\"}",
+          "payload": "{\"systemMessage\":\"Success\",\"systemCode\":\"1\",\"responseMessage\":\"Success\",\"responseCode\":\"1\"}",
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "9ntAlpkBRSgSPs_V7It8",
+        "_score": 1,
+        "_ignored": [
+          "payload.keyword",
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T16:14:11.304Z",
+          "ktSvcContId": "8o7Pcp667t1XqUNpkOk4Kw==",
+          "caller": {
+            "channelIp": "61.78.32.109",
+            "channel": "SCIS"
+          },
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            },
+            "offset": 1889
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "seq": "2",
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "정상적으로 처리 되었습니다",
+            "duration": "89"
+          },
+          "payload": "{\"productList\":[{\"ncrabSvcContId\":\"\",\"productCd\":\"2K40\",\"productName\":\"넷플릭스 프리미엄(ipit TV)\",\"productSubscriptionStartDateTime\":\"20250930011409\",\"contractYn\":\"N\",\"contractPeriodCd\":\"EQ0M\",\"expiredDate\":null,\"promotionId\":null,\"promotionCd\":null,\"promotionGroupCd\":null,\"notPenaltyYn\":\"N\"}],\"responseCode\":\"GPV0000\",\"responseMessage\":\"정상적으로 처리 되었습니다\",\"transaction_id\":\"SCIS20250930011409000040\",\"productCnt\":\"1\"}",
+          "transactionId": "SCIS20250930011409000040",
+          "gsvcContId": "ncKZLrS2sAhIDi5fbt8dWw==",
+          "timestamp": "2025-09-30 01:14:09.310",
+          "service": "PG103701",
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "operation": "GPV0111",
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "serviceDomain": "GPV",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/subscribe/addprod/join",
+          "logType": "IN_RES",
+          "processDesc": "{\"productList\":[{\"ncrabSvcContId\":null,\"productCd\":\"2K40\",\"contractYn\":\"N\",\"contractPeriodCd\":\"EQ0M\",\"expiredDate\":null,\"promotionId\":null,\"promotionCd\":null,\"promotionGroupCd\":null,\"notPenaltyYn\":\"N\",\"upsellingYn\":null}],\"gcode\":\"SL\",\"gsvcContId\":\"ncKZLrS2sAhIDi5fbt8dWw==\",\"orderNumber\":\"SL2527300092251\",\"orderTypeCd\":\"CZ\",\"receiptDateTime\":\"20250930011408\",\"completeDateTime\":\"20250930011409\",\"ktSvcContId\":\"8o7Pcp667t1XqUNpkOk4Kw==\",\"baseProductCd\":\"0K01\",\"updateTypeCd\":null,\"productCnt\":\"1\"}",
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "93tElpkBRSgSPs_V5Iv3",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:18:31.523Z",
+          "log": {
+            "offset": 4803,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "operation": "SL0201",
+          "logType": "OUT_RES",
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "gsvcContId": "7mZUeSkHuRgEJ9Sr6yFb1A==",
+          "service": "PG103701",
+          "input": {
+            "type": "log"
+          },
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "response": {
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "965",
+            "type": "E"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"7mZUeSkHuRgEJ9Sr6yFb1A==\",\"ktSvcContId\":\"iihchm3nGuIdzaYkQEwA7w==\",\"orderNumber\":\"SL2526900088894\",\"activationDateTime\":\"20250926161445\",\"macAddress\":\"jMftbpHcMdFKwW/uzsKe6Q==\"}",
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "serviceDomain": "GPV",
+          "ktSvcContId": "iihchm3nGuIdzaYkQEwA7w==",
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "timestamp": "2025-09-30 01:18:30.547",
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "seq": "2",
+          "transactionId": "UCEMS20250930011829508",
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "-HtElpkBRSgSPs_V5Iv3",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:18:31.523Z",
+          "seq": "2",
+          "serviceDomain": "GPV",
+          "processDesc": "{\"ktSvcContId\":\"SL000060405\",\"orderNumber\":\"SL2526900088894\",\"macAddress\":\"001DECA4AF18\",\"activationDateTime\":\"20250926161445\"}",
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "ktSvcContId": "SL000060405",
+          "operation": "GPV0201",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "timestamp": "2025-09-30 01:18:30.575",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            },
+            "offset": 5858
+          },
+          "input": {
+            "type": "log"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "service": "PG103701",
+          "transactionId": "UCEMS20250930011829508",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "response": {
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "1023",
+            "type": "E"
+          },
+          "logType": "IN_RES",
+          "ecs": {
+            "version": "8.0.0"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "3kxElpkB9y6EhAQW7z5i",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:18:34.191Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "timestamp": "2025-09-30 01:18:29.603",
+          "input": {
+            "type": "log"
+          },
+          "operation": "GPV0201",
+          "response": {
+            "type": "I",
+            "code": "AGW5200",
+            "duration": "53",
+            "desc": "AGW5200"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "log": {
+            "offset": 3978,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            }
+          },
+          "transactionId": "UCEMS20250930011829524",
+          "service": "PG103701",
+          "logType": "IN_MSG"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "30xElpkB9y6EhAQW7z5i",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:18:34.191Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "log": {
+            "offset": 4375,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            }
+          },
+          "timestamp": "2025-09-30 01:18:30.580",
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "1042",
+            "desc": "AGW0000"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "service": "PG103701",
+          "logType": "IN_MSG",
+          "operation": "GPV0201",
+          "transactionId": "UCEMS20250930011829508"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "4ExFlpkB9y6EhAQWAz4T",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:18:39.232Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "timestamp": "2025-09-30 01:18:29.603",
+          "response": {
+            "type": "I",
+            "code": "AGW5200",
+            "duration": "61",
+            "desc": "AGW5200"
+          },
+          "log": {
+            "offset": 3201,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-m7nfz_elk.log"
+            }
+          },
+          "service": "PG103701",
+          "transactionId": "UCEMS20250930011829524",
+          "logType": "IN_MSG",
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "operation": "GPV0201",
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "4UxFlpkB9y6EhAQWAz4T",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:18:39.232Z",
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "ktSvcContId": "M4nEqKnzbLpa2z8PIgdPPA==",
+          "logType": "OUT_RES",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"p++50vcM60i9TBRkPFqnAA==\",\"ktSvcContId\":\"M4nEqKnzbLpa2z8PIgdPPA==\",\"orderNumber\":\"SL2526800086908\",\"activationDateTime\":\"20250925142733\",\"macAddress\":\"ishaaafVtzzeqxETqueOpQ==\"}",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "timestamp": "2025-09-30 01:18:30.545",
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "response": {
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "962"
+          },
+          "serviceDomain": "GPV",
+          "container": {
+            "ip": "192.168.100.20",
+            "name": "gpv-864976bb8b-lvj5h"
+          },
+          "seq": "2",
+          "transactionId": "UCEMS20250930011829508",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            },
+            "offset": 2048
+          },
+          "input": {
+            "type": "log"
+          },
+          "gsvcContId": "p++50vcM60i9TBRkPFqnAA==",
+          "service": "PG103701",
+          "operation": "SL0201"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "4kxFlpkB9y6EhAQWAz4T",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:18:39.232Z",
+          "input": {
+            "type": "log"
+          },
+          "service": "PG103701",
+          "operation": "GPV0201",
+          "seq": "2",
+          "timestamp": "2025-09-30 01:18:30.577",
+          "logType": "IN_RES",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "ktSvcContId": "SL000059001",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "serviceDomain": "GPV",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "log": {
+            "offset": 3103,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "transactionId": "UCEMS20250930011829508",
+          "processDesc": "{\"ktSvcContId\":\"SL000059001\",\"orderNumber\":\"SL2526800086908\",\"macAddress\":\"001DECA47EAA\",\"activationDateTime\":\"20250925142733\"}",
+          "response": {
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "1023",
+            "type": "E"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "d99AlpkB3DsinIFl-Hio",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:14:14.420Z",
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "111",
+            "desc": "AGW0000"
+          },
+          "caller": {
+            "channelIp": "61.78.32.109",
+            "channel": "SCIS"
+          },
+          "service": "PG103701",
+          "timestamp": "2025-09-30 01:14:09.312",
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "transactionId": "SCIS20250930011409000040",
+          "logType": "IN_MSG",
+          "log": {
+            "offset": 3585,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-gvrbm_elk.log"
+            }
+          },
+          "operation": "GPV0111",
+          "url": "https://api.picaso.kt.co.kr/picaso/subscribe/addprod/join"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "20xElpkB9y6EhAQW5D5f",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:18:31.370Z",
+          "logType": "IN_MSG",
+          "transactionId": "UCEMS20250930011829508",
+          "input": {
+            "type": "log"
+          },
+          "operation": "GPV0201",
+          "timestamp": "2025-09-30 01:18:30.577",
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "1041",
+            "desc": "AGW0000"
+          },
+          "log": {
+            "offset": 1592,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-6xt87_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "3ExElpkB9y6EhAQW5D5f",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:18:36.360Z",
+          "seq": "2",
+          "log": {
+            "offset": 3672,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            }
+          },
+          "serviceDomain": "GPV",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107001\",\"orderNumber\":\"SLT50107001\",\"macAddress\":\"001DEC9118FE\",\"activationDateTime\":\"20250820170305\"}",
+          "response": {
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": ""
+          },
+          "timestamp": "2025-09-30 01:18:29.601",
+          "operation": "GPV0201",
+          "input": {
+            "type": "log"
+          },
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "transactionId": "UCEMS20250930011829524",
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "payload": "{\"responseMessage\":\"SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "ktSvcContId": "SLT50107001",
+          "logType": "IN_RES",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "3UxElpkB9y6EhAQW5D5f",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:18:36.361Z",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107006\",\"orderNumber\":\"SLT50107006\",\"macAddress\":\"001DEC8EC6E2\",\"activationDateTime\":\"20250820172320\"}",
+          "service": "PG103701",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "operation": "GPV0201",
+          "logType": "IN_RES",
+          "ktSvcContId": "SLT50107006",
+          "transactionId": "UCEMS20250930011829524",
+          "input": {
+            "type": "log"
+          },
+          "seq": "2",
+          "response": {
+            "duration": "",
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다."
+          },
+          "serviceDomain": "GPV",
+          "timestamp": "2025-09-30 01:18:29.601",
+          "log": {
+            "offset": 4620,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            }
+          },
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "payload": "{\"responseMessage\":\"SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "1Ew7lpkB9y6EhAQWPj4Y",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:07:58.980Z",
+          "log": {
+            "offset": 1993,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-m7nfz_elk.log"
+            }
+          },
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.110"
+          },
+          "transactionId": "SCIS20250930010755000027",
+          "service": "PG103701",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "IN_MSG",
+          "input": {
+            "type": "log"
+          },
+          "timestamp": "2025-09-30 01:07:55.403",
+          "operation": "GPV0111",
+          "response": {
+            "code": "AGW0000",
+            "duration": "133",
+            "desc": "AGW0000",
+            "type": "I"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/subscribe/addprod/join"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "eN9NlpkB3DsinIFl5Xjl",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T16:28:21.514Z",
+          "transactionId": "SCIS20250930012821000043",
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "response": {
+            "desc": "AGW0000",
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "107"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/subscribe/addprod/join",
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.110"
+          },
+          "service": "PG103701",
+          "log": {
+            "offset": 1991,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-6xt87_elk.log"
+            }
+          },
+          "timestamp": "2025-09-30 01:28:21.141",
+          "logType": "IN_MSG",
+          "operation": "GPV0111"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "bd8ylpkB3DsinIFlUHjZ",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T15:58:13.956Z",
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW5200",
+            "duration": "61",
+            "desc": "AGW5200"
+          },
+          "operation": "GPV0201",
+          "transactionId": "UCEMS20250930005811189",
+          "timestamp": "2025-09-30 00:58:11.281",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "log": {
+            "offset": 3182,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            }
+          },
+          "service": "PG103701",
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "logType": "IN_MSG"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "F3uPlpkBRSgSPs_VWoxZ",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:39:51.236Z",
+          "response": {
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "463"
+          },
+          "gsvcContId": "p++50vcM60i9TBRkPFqnAA==",
+          "transactionId": "UCEMS20250930023945143",
+          "seq": "2",
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "service": "PG103701",
+          "ktSvcContId": "M4nEqKnzbLpa2z8PIgdPPA==",
+          "operation": "SL0201",
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "log": {
+            "offset": 3942,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "OUT_RES",
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "timestamp": "2025-09-30 02:39:45.670",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "serviceDomain": "GPV",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"p++50vcM60i9TBRkPFqnAA==\",\"ktSvcContId\":\"M4nEqKnzbLpa2z8PIgdPPA==\",\"orderNumber\":\"SL2526800086908\",\"activationDateTime\":\"20250925142733\",\"macAddress\":\"ishaaafVtzzeqxETqueOpQ==\"}",
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "GHuPlpkBRSgSPs_VWoxZ",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:39:51.236Z",
+          "ktSvcContId": "tOZ8k5TCb7pbqMVIUk+aAQ==",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "operation": "SL0201",
+          "service": "PG103701",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"T94a9lX8BdwXFVU2AdLJLg==\",\"ktSvcContId\":\"tOZ8k5TCb7pbqMVIUk+aAQ==\",\"orderNumber\":\"SL2527200092049\",\"activationDateTime\":\"20250930023819\",\"macAddress\":\"4Kj5kHTumNsO7PbdJLep2Q==\"}",
+          "transactionId": "UCEMS20250930023945127",
+          "container": {
+            "ip": "192.168.100.20",
+            "name": "gpv-864976bb8b-lvj5h"
+          },
+          "log": {
+            "offset": 4997,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "gsvcContId": "T94a9lX8BdwXFVU2AdLJLg==",
+          "serviceDomain": "GPV",
+          "timestamp": "2025-09-30 02:39:45.687",
+          "seq": "2",
+          "payload": "{\"responseCode\":\"SCIS0000\",\"responseMessage\":\"정상적으로 처리 되었습니다.\"}",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "logType": "OUT_RES",
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "SUCCESS",
+            "duration": "0"
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "GXuPlpkBRSgSPs_VWoxZ",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:39:51.236Z",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            },
+            "offset": 6045
+          },
+          "timestamp": "2025-09-30 02:39:45.705",
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "529"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "serviceDomain": "GPV",
+          "seq": "2",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "service": "PG103701",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "logType": "IN_RES",
+          "input": {
+            "type": "log"
+          },
+          "transactionId": "UCEMS20250930023945143",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "ktSvcContId": "SL000059001",
+          "operation": "GPV0201",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "processDesc": "{\"ktSvcContId\":\"SL000059001\",\"orderNumber\":\"SL2526800086908\",\"macAddress\":\"001DECA47EAA\",\"activationDateTime\":\"20250925142733\"}"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "GnuPlpkBRSgSPs_VWoxZ",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:39:51.236Z",
+          "seq": "2",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "정상적으로 처리 되었습니다.",
+            "duration": "561"
+          },
+          "log": {
+            "offset": 7036,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "transactionId": "UCEMS20250930023945127",
+          "processDesc": "{\"ktSvcContId\":\"SL000062407\",\"orderNumber\":\"SL2527200092049\",\"macAddress\":\"001DECA47DB8\",\"activationDateTime\":\"20250930023819\"}",
+          "ktSvcContId": "SL000062407",
+          "payload": "{\"responseCode\":\"GPV0000\",\"responseMessage\":\"정상적으로 처리 되었습니다.\"}",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "IN_RES",
+          "operation": "GPV0201",
+          "timestamp": "2025-09-30 02:39:45.724",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "serviceDomain": "GPV",
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "-kyPlpkB9y6EhAQWYD7K",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:39:52.885Z",
+          "input": {
+            "type": "log"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": ""
+          },
+          "seq": "2",
+          "service": "PG103701",
+          "logType": "IN_RES",
+          "serviceDomain": "GPV",
+          "operation": "GPV0201",
+          "transactionId": "UCEMS20250930023945143",
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107006\",\"orderNumber\":\"SLT50107006\",\"macAddress\":\"001DEC8EC6E2\",\"activationDateTime\":\"20250820172320\"}",
+          "payload": "{\"responseMessage\":\"SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            },
+            "offset": 4760
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "ktSvcContId": "SLT50107006",
+          "timestamp": "2025-09-30 02:39:45.220"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "G3uPlpkBRSgSPs_VZoyg",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:39:54.379Z",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "payload": "{\"responseMessage\":\"SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "ktSvcContId": "SLT50107001",
+          "log": {
+            "offset": 5593,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "transactionId": "UCEMS20250930023945112",
+          "seq": "2",
+          "input": {
+            "type": "log"
+          },
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "logType": "IN_RES",
+          "serviceDomain": "GPV",
+          "operation": "GPV0201",
+          "response": {
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": ""
+          },
+          "service": "PG103701",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107001\",\"orderNumber\":\"SLT50107001\",\"macAddress\":\"001DEC9118FE\",\"activationDateTime\":\"20250820170305\"}",
+          "timestamp": "2025-09-30 02:39:45.206"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "HHuPlpkBRSgSPs_VZoyg",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:39:54.379Z",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"7mZUeSkHuRgEJ9Sr6yFb1A==\",\"ktSvcContId\":\"iihchm3nGuIdzaYkQEwA7w==\",\"orderNumber\":\"SL2526900088894\",\"activationDateTime\":\"20250926161445\",\"macAddress\":\"jMftbpHcMdFKwW/uzsKe6Q==\"}",
+          "gsvcContId": "7mZUeSkHuRgEJ9Sr6yFb1A==",
+          "log": {
+            "offset": 6541,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "service": "PG103701",
+          "operation": "SL0201",
+          "logType": "OUT_RES",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "serviceDomain": "GPV",
+          "timestamp": "2025-09-30 02:39:45.649",
+          "transactionId": "UCEMS20250930023945127",
+          "response": {
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "455",
+            "type": "E"
+          },
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "input": {
+            "type": "log"
+          },
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "ktSvcContId": "iihchm3nGuIdzaYkQEwA7w==",
+          "seq": "2",
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          },
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "HXuPlpkBRSgSPs_VZoyg",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:39:54.379Z",
+          "timestamp": "2025-09-30 02:39:45.678",
+          "container": {
+            "ip": "192.168.126.28",
+            "name": "gpv-864976bb8b-nm2k7"
+          },
+          "operation": "GPV0201",
+          "transactionId": "UCEMS20250930023945127",
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "515"
+          },
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "logType": "IN_RES",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "processDesc": "{\"ktSvcContId\":\"SL000060405\",\"orderNumber\":\"SL2526900088894\",\"macAddress\":\"001DECA4AF18\",\"activationDateTime\":\"20250926161445\"}",
+          "ktSvcContId": "SL000060405",
+          "log": {
+            "offset": 7596,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "service": "PG103701",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "serviceDomain": "GPV",
+          "seq": "2"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "HnuPlpkBRSgSPs_VaYyK",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:39:55.127Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "timestamp": "2025-09-30 02:39:45.223",
+          "logType": "IN_MSG",
+          "response": {
+            "type": "I",
+            "code": "AGW5200",
+            "duration": "56",
+            "desc": "AGW5200"
+          },
+          "transactionId": "UCEMS20250930023945143",
+          "operation": "GPV0201",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "service": "PG103701",
+          "log": {
+            "offset": 7978,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "H3uPlpkBRSgSPs_VaYyK",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:39:55.127Z",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "transactionId": "UCEMS20250930023945143",
+          "service": "PG103701",
+          "logType": "IN_MSG",
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "545",
+            "desc": "AGW0000"
+          },
+          "operation": "GPV0201",
+          "timestamp": "2025-09-30 02:39:45.706",
+          "log": {
+            "offset": 8375,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "mN-SlpkB3DsinIFl93ga",
+        "_score": 1,
+        "_ignored": [
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T17:43:47.973Z",
+          "gsvcContId": "ZRsz2UEGd5f0jmEgGsL+uA==",
+          "input": {
+            "type": "log"
+          },
+          "serviceDomain": "GPV",
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "service": "PG103701",
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "caller": {
+            "channel": "MEIN",
+            "channelIp": "172.16.49.118"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "seq": "2",
+          "payload": "{\"responseCode\":\"SCIS0000\",\"responseMessage\":\"정상적으로 처리 되었습니다.\",\"gcode\":\"SL\",\"gsvcContId\":\"ZRsz2UEGd5f0jmEgGsL+uA==\",\"productCnt\":\"1\",\"productList\":[{\"productCd\":\"2K19\",\"productName\":\"PINKHOUSE(ipit TV)\"}]}",
+          "ktSvcContId": "kPFMxwlgvB9jP9L9kk09/w==",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            },
+            "offset": 5708
+          },
+          "transactionId": "ca0f4b35-84b7-4615-b86c-b3e62995e09e",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"ZRsz2UEGd5f0jmEgGsL+uA==\",\"ktSvcContId\":\"kPFMxwlgvB9jP9L9kk09/w==\",\"orderNumber\":\"20250930024345\",\"orderSeqNumber\":\"1\",\"receiptDate\":\"20250930024345\",\"contactRoute\":\"01\",\"productCnt\":\"1\",\"productList\":[{\"ncrabSvcContId\":\"\",\"chgCode\":\"33\",\"productCd\":\"2K19\",\"productName\":\"PINKHOUSE(ipit TV)\",\"promotionYn\":null,\"promotionMmCnt\":\"\",\"contractPeriodCd\":\"EQ1Y\",\"mobileNo\":\"\",\"productSubscriptionEndDateTime\":null}]}",
+          "timestamp": "2025-09-30 02:43:46.508",
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "SUCCESS",
+            "duration": "470"
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/subscribe/onscreen",
+          "destination": {
+            "ip": "172.16.64.78",
+            "name": "SCIS"
+          },
+          "operation": "SL1102",
+          "logType": "OUT_RES"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "md-SlpkB3DsinIFl93ga",
+        "_score": 1,
+        "_ignored": [
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T17:43:47.974Z",
+          "transactionId": "ca0f4b35-84b7-4615-b86c-b3e62995e09e",
+          "timestamp": "2025-09-30 02:43:46.539",
+          "service": "PG103701",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "ktSvcContId": "kPFMxwlgvB9jP9L9kk09/w==",
+          "operation": "GPV1102",
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "payload": "{\"responseCode\":\"GPV0000\",\"responseMessage\":\"정상적으로 처리 되었습니다\"}",
+          "response": {
+            "code": "GPV0000",
+            "desc": "정상적으로 처리 되었습니다",
+            "duration": "534",
+            "type": "I"
+          },
+          "log": {
+            "offset": 7210,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            }
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/subscribe/onscreen",
+          "logType": "IN_RES",
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "serviceDomain": "GPV",
+          "processDesc": "{\"ktSvcContId\":\"kPFMxwlgvB9jP9L9kk09/w==\",\"orderNumber\":\"20250930024345\",\"orderSeqNumber\":\"1\",\"receiptDate\":\"20250930024345\",\"contactRoute\":\"01\",\"productCnt\":\"1\",\"productList\":[{\"ncrabSvcContId\":\" \",\"chgCode\":\"33\",\"productCd\":\"2K19\",\"productName\":\"PINKHOUSE(Skylife IP-위성)\",\"promotionYn\":null,\"promotionMmCnt\":\"\",\"contractPeriodCd\":\"EQ1Y\",\"mobileNo\":\"\",\"productSubscriptionEndDateTime\":null}]}",
+          "seq": "2",
+          "caller": {
+            "channel": "MEIN",
+            "channelIp": "172.16.49.118"
+          },
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "mt-SlpkB3DsinIFl93ga",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:43:52.979Z",
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.110"
+          },
+          "transactionId": "SCIS20250930024346000059",
+          "log": {
+            "offset": 5576,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-6xt87_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "timestamp": "2025-09-30 02:43:46.478",
+          "operation": "GPV0111",
+          "input": {
+            "type": "log"
+          },
+          "service": "PG103701",
+          "url": "https://api.picaso.kt.co.kr/picaso/subscribe/addprod/join",
+          "logType": "IN_MSG",
+          "response": {
+            "duration": "109",
+            "desc": "AGW0000",
+            "type": "I",
+            "code": "AGW0000"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "k998lpkB3DsinIFlsnhY",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:19:28.579Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "service": "PG103701",
+          "serviceDomain": "GPV",
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "timestamp": "2025-09-30 02:19:26.215",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107001\",\"orderNumber\":\"SLT50107001\",\"macAddress\":\"001DEC9118FE\",\"activationDateTime\":\"20250820170305\"}",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "operation": "GPV0201",
+          "input": {
+            "type": "log"
+          },
+          "payload": "{\"responseMessage\":\"SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "ktSvcContId": "SLT50107001",
+          "transactionId": "UCEMS20250930021926123",
+          "seq": "2",
+          "log": {
+            "offset": 3697,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": ""
+          },
+          "container": {
+            "ip": "192.168.126.28",
+            "name": "gpv-864976bb8b-nm2k7"
+          },
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "logType": "IN_RES"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "8Ex8lpkB9y6EhAQWtz5Z",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:19:29.861Z",
+          "response": {
+            "duration": "68",
+            "desc": "AGW5200",
+            "type": "I",
+            "code": "AGW5200"
+          },
+          "log": {
+            "offset": 7184,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            }
+          },
+          "operation": "GPV0201",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "transactionId": "UCEMS20250930021926123",
+          "logType": "IN_MSG",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "timestamp": "2025-09-30 02:19:26.221",
+          "service": "PG103701",
+          "input": {
+            "type": "log"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "8Ux8lpkB9y6EhAQWuj6q",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:19:30.709Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "IN_MSG",
+          "timestamp": "2025-09-30 02:19:27.149",
+          "transactionId": "UCEMS20250930021926138",
+          "operation": "GPV0201",
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "log": {
+            "offset": 6381,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-m7nfz_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "990",
+            "desc": "AGW0000"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "8kx8lpkB9y6EhAQWuj6q",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:19:30.709Z",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "service": "PG103701",
+          "operation": "SL0201",
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "ktSvcContId": "iihchm3nGuIdzaYkQEwA7w==",
+          "timestamp": "2025-09-30 02:19:27.120",
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "logType": "OUT_RES",
+          "container": {
+            "ip": "192.168.100.20",
+            "name": "gpv-864976bb8b-lvj5h"
+          },
+          "serviceDomain": "GPV",
+          "log": {
+            "offset": 948,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "response": {
+            "duration": "912",
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL"
+          },
+          "transactionId": "UCEMS20250930021926138",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "seq": "2",
+          "gsvcContId": "7mZUeSkHuRgEJ9Sr6yFb1A==",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"7mZUeSkHuRgEJ9Sr6yFb1A==\",\"ktSvcContId\":\"iihchm3nGuIdzaYkQEwA7w==\",\"orderNumber\":\"SL2526900088894\",\"activationDateTime\":\"20250926161445\",\"macAddress\":\"jMftbpHcMdFKwW/uzsKe6Q==\"}",
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "80x8lpkB9y6EhAQWuj6q",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:19:30.709Z",
+          "logType": "IN_RES",
+          "ktSvcContId": "SL000060405",
+          "service": "PG103701",
+          "transactionId": "UCEMS20250930021926138",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "timestamp": "2025-09-30 02:19:27.148",
+          "serviceDomain": "GPV",
+          "input": {
+            "type": "log"
+          },
+          "processDesc": "{\"ktSvcContId\":\"SL000060405\",\"orderNumber\":\"SL2526900088894\",\"macAddress\":\"001DECA4AF18\",\"activationDateTime\":\"20250926161445\"}",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "974"
+          },
+          "seq": "2",
+          "log": {
+            "offset": 2003,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "operation": "GPV0201"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "EXt8lpkBRSgSPs_VwYzp",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:19:32.564Z",
+          "log": {
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            },
+            "offset": 4093
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "processDesc": "{\"ktSvcContId\":\"SLT50107006\",\"orderNumber\":\"SLT50107006\",\"macAddress\":\"001DEC8EC6E2\",\"activationDateTime\":\"20250820172320\"}",
+          "timestamp": "2025-09-30 02:19:26.219",
+          "payload": "{\"responseMessage\":\"SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "serviceDomain": "GPV",
+          "seq": "2",
+          "container": {
+            "ip": "192.168.124.21",
+            "name": "gpv-864976bb8b-mxmmm"
+          },
+          "service": "PG103701",
+          "transactionId": "UCEMS20250930021926123",
+          "logType": "IN_RES",
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "input": {
+            "type": "log"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "response": {
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107006 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": ""
+          },
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "ktSvcContId": "SLT50107006",
+          "operation": "GPV0201"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "Ent8lpkBRSgSPs_VwYzp",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:19:32.564Z",
+          "seq": "2",
+          "input": {
+            "type": "log"
+          },
+          "serviceDomain": "GPV",
+          "gsvcContId": "p++50vcM60i9TBRkPFqnAA==",
+          "ktSvcContId": "M4nEqKnzbLpa2z8PIgdPPA==",
+          "timestamp": "2025-09-30 02:19:27.118",
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "log": {
+            "offset": 5041,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            }
+          },
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "response": {
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "916"
+          },
+          "logType": "OUT_RES",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"p++50vcM60i9TBRkPFqnAA==\",\"ktSvcContId\":\"M4nEqKnzbLpa2z8PIgdPPA==\",\"orderNumber\":\"SL2526800086908\",\"activationDateTime\":\"20250925142733\",\"macAddress\":\"ishaaafVtzzeqxETqueOpQ==\"}",
+          "service": "PG103701",
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "operation": "SL0201",
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "transactionId": "UCEMS20250930021926138"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "E3t8lpkBRSgSPs_VwYzp",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:19:32.565Z",
+          "service": "PG103701",
+          "seq": "2",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "transactionId": "UCEMS20250930021926138",
+          "logType": "IN_RES",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "response": {
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "979"
+          },
+          "timestamp": "2025-09-30 02:19:27.149",
+          "processDesc": "{\"ktSvcContId\":\"SL000059001\",\"orderNumber\":\"SL2526800086908\",\"macAddress\":\"001DECA47EAA\",\"activationDateTime\":\"20250925142733\"}",
+          "ktSvcContId": "SL000059001",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "operation": "GPV0201",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "log": {
+            "offset": 6096,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "container": {
+            "ip": "192.168.124.21",
+            "name": "gpv-864976bb8b-mxmmm"
+          },
+          "serviceDomain": "GPV",
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "JHuhlpkBRSgSPs_V-owv",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T18:00:11.801Z",
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "timestamp": "2025-09-30 03:00:06.525",
+          "serviceDomain": "GPV",
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "SUCCESS",
+            "duration": "39"
+          },
+          "payload": "{\"systemMessage\":\"Success\",\"systemCode\":\"1\",\"responseMessage\":\"Success\",\"responseCode\":\"1\"}",
+          "destination": {
+            "name": "MEIN",
+            "ip": "172.16.6.41"
+          },
+          "operation": "GA0102",
+          "url": "https://mein-pv.megatvdnp.co.kr:443/GPV/ConfirmAccount",
+          "transactionId": "SCIS20250930030006000045",
+          "log": {
+            "offset": 0,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "seq": "2",
+          "processDesc": "{\"svcContId\":\"6Lz25Ri9lqJ2SpsK0FZmKA==\",\"receiptDt\":\"20250919145136\",\"oltOfficeCd\":\"R02442\",\"svcScrCd\":\"GPV\"}",
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.109"
+          },
+          "service": "PG103701",
+          "logType": "OUT_RES",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "JXuhlpkBRSgSPs_V-owv",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T18:00:11.801Z",
+          "log": {
+            "offset": 8779,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-m7nfz_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "input": {
+            "type": "log"
+          },
+          "operation": "GPV0201",
+          "logType": "IN_MSG",
+          "transactionId": "UCEMS20250930030006659",
+          "service": "PG103701",
+          "timestamp": "2025-09-30 03:00:06.762",
+          "response": {
+            "type": "I",
+            "code": "AGW5200",
+            "duration": "49",
+            "desc": "AGW5200"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "JnuhlpkBRSgSPs_V-owv",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T18:00:11.802Z",
+          "transactionId": "UCEMS20250930030006659",
+          "response": {
+            "desc": "AGW0000",
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "565"
+          },
+          "service": "PG103701",
+          "operation": "GPV0201",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "logType": "IN_MSG",
+          "timestamp": "2025-09-30 03:00:07.254",
+          "log": {
+            "offset": 9176,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-m7nfz_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "J3uhlpkBRSgSPs_V-owv",
+        "_score": 1,
+        "_ignored": [
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T18:00:11.802Z",
+          "transactionId": "SCIS20250930030006000045",
+          "seq": "2",
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.109"
+          },
+          "destination": {
+            "name": "nCRAB",
+            "ip": "10.220.164.167"
+          },
+          "input": {
+            "type": "log"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "timestamp": "2025-09-30 03:00:06.715",
+          "url": "https://ncrabsvc.kt.com:443/charging/v1/parent/subscribeReserveProductFix",
+          "service": "PG103701",
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "logType": "OUT_RES",
+          "processDesc": "{\"transaction_id\":\"SCIS20250930030006000045\",\"market_id\":\"SKY001\",\"subscriber_id_type\":\"A\",\"subscriber_id\":\"SL000053817\",\"interface_code\":\"4201\",\"icis_order_number\":\"SL2526200078911\",\"icis_transfer_time\":\"20250930030006\",\"idms_order_number\":\"SL2526200078911\",\"installation_completion_time\":\"20250930030006\",\"contact_route\":\"22\"}",
+          "serviceDomain": "GPV",
+          "log": {
+            "offset": 872,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "payload": "{\"kt_message\":{\"transaction_id\":\"SCIS20250930030006000045\",\"response_code\":\"CHRG0000\",\"response_message\":\"정상적으로 처리되었습니다.\"}}",
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "response": {
+            "code": "GPV0000",
+            "desc": "SUCCESS",
+            "duration": "187",
+            "type": "I"
+          },
+          "operation": "IN1003"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "KHuhlpkBRSgSPs_V-owv",
+        "_score": 1,
+        "_ignored": [
+          "payload.keyword",
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T18:00:11.802Z",
+          "log": {
+            "offset": 2065,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "processDesc": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Envelope xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns2=\"http://www.ktcems.co.kr/CemsLinkage/PICASO\">\n    <Header/>\n    <Body>\n        <ns2:IPTVOrderYDProc>\n            <ns2:hcnIptvBodyData>\n                <ns2:InPutType>H</ns2:InPutType>\n                <ns2:ChangeCode>4201</ns2:ChangeCode>\n                <ns2:UpdateTypeCode></ns2:UpdateTypeCode>\n                <ns2:SaID>SL000053817</ns2:SaID>\n                <ns2:OdrNum>SL2526200078911</ns2:OdrNum>\n                <ns2:OdrSeqNo>1</ns2:OdrSeqNo>\n                <ns2:ReceiptDT>2025-09-19 14:51:36</ns2:ReceiptDT>\n                <ns2:ConnHopeDT>2025093003</ns2:ConnHopeDT>\n                <ns2:MacAddress>001DEC9705B8</ns2:MacAddress>\n                <ns2:ModelCode>K9209343</ns2:ModelCode>\n                <ns2:Name>주식회사 미르통*</ns2:Name>\n                <ns2:ZipCode>27182</ns2:ZipCode>\n                <ns2:AddrDong>380626</ns2:AddrDong>\n                <ns2:AddrName1>충북 제천시 화산동</ns2:AddrName1>\n                <ns2:OfficeCode>R02442</ns2:OfficeCode>\n                <ns2:YnVodOpen>Y</ns2:YnVodOpen>\n                <ns2:PinNum>0000</ns2:PinNum>\n                <ns2:UsePurposeCode>1</ns2:UsePurposeCode>\n                <ns2:AddSvcList>\n                    <ns2:string>0K01</ns2:string>\n                    <ns2:string>2K16</ns2:string>\n                </ns2:AddSvcList>\n            </ns2:hcnIptvBodyData>\n        </ns2:IPTVOrderYDProc>\n    </Body>\n</Envelope>\n",
+          "seq": "2",
+          "transactionId": "SCIS20250930030006000045",
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.109"
+          },
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "timestamp": "2025-09-30 03:00:06.817",
+          "url": "http://172.16.64.78:80/CemsLinkage/PICASO/PICASOToUCEMS.asmx",
+          "input": {
+            "type": "log"
+          },
+          "destination": {
+            "name": "UCEMS",
+            "ip": "172.16.64.78"
+          },
+          "serviceDomain": "GPV",
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "SUCCESS",
+            "duration": "93"
+          },
+          "container": {
+            "name": "gpv-864976bb8b-lvj5h",
+            "ip": "192.168.100.20"
+          },
+          "payload": "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><IPTVOrderYDProcResponse xmlns=\"http://www.ktcems.co.kr/CemsLinkage/PICASO\"><IPTVOrderYDProcResult>1</IPTVOrderYDProcResult></IPTVOrderYDProcResponse></soap:Body></soap:Envelope>",
+          "logType": "OUT_RES",
+          "operation": "GWFM_LEMS_OSB0001",
+          "service": "PG103701"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "KXuhlpkBRSgSPs_V-owv",
+        "_score": 1,
+        "_ignored": [
+          "processDesc.keyword"
+        ],
+        "_source": {
+          "@timestamp": "2025-09-29T18:00:11.802Z",
+          "input": {
+            "type": "log"
+          },
+          "operation": "GPV0102",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/subscribe/complete",
+          "timestamp": "2025-09-30 03:00:06.855",
+          "transactionId": "SCIS20250930030006000045",
+          "payload": "{\"responseCode\":\"GPV0000\",\"responseMessage\":\"정상적으로 처리 되었습니다\",\"productCnt\":\"1\",\"productList\":[{\"productCd\":\"2K16\",\"productName\":\"허니TV(ipit TV)\",\"ncrabSvcContId\":\"\",\"productSubscriptionStartDateTime\":\"20250930030006\",\"errorCode\":null,\"errorMessage\":null}]}",
+          "serviceDomain": "GPV",
+          "logType": "IN_RES",
+          "seq": "2",
+          "caller": {
+            "channel": "SCIS",
+            "channelIp": "61.78.32.109"
+          },
+          "container": {
+            "ip": "192.168.100.20",
+            "name": "gpv-864976bb8b-lvj5h"
+          },
+          "log": {
+            "offset": 4697,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-lvj5h_elk.log"
+            }
+          },
+          "device": {
+            "id": "picaso.worker04.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"qzW8xxfEY7z/WpEMPAyaRA==\",\"orderNumber\":\"SL2526200078911\",\"orderTypeCd\":\"N1\",\"ktSvcContId\":\"6Lz25Ri9lqJ2SpsK0FZmKA==\",\"receiptDateTime\":\"20250919145136\",\"completeDateTime\":\"20250930030006\",\"baseProductCd\":\"0K01\",\"officeCd\":\"R02442\",\"staticIpAddress\":null,\"selfInstallYn\":null,\"stbModelCd\":\"K9209343\",\"macAddress\":\"asWd0p9QQ2vtO2fKYOkjdg==\",\"pinNo\":\"0000\"}",
+          "response": {
+            "type": "I",
+            "code": "GPV0000",
+            "desc": "정상적으로 처리 되었습니다",
+            "duration": "385"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "service": "PG103701",
+          "gsvcContId": "qzW8xxfEY7z/WpEMPAyaRA==",
+          "ktSvcContId": "6Lz25Ri9lqJ2SpsK0FZmKA=="
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "FHuGlpkBRSgSPs_VEYwe",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:29:42.665Z",
+          "destination": {
+            "name": "SCIS",
+            "ip": "172.16.64.78"
+          },
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "service": "PG103701",
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "input": {
+            "type": "log"
+          },
+          "seq": "2",
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "timestamp": "2025-09-30 02:29:36.092",
+          "ktSvcContId": "M4nEqKnzbLpa2z8PIgdPPA==",
+          "log": {
+            "offset": 2714,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            }
+          },
+          "logType": "OUT_RES",
+          "gsvcContId": "p++50vcM60i9TBRkPFqnAA==",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"p++50vcM60i9TBRkPFqnAA==\",\"ktSvcContId\":\"M4nEqKnzbLpa2z8PIgdPPA==\",\"orderNumber\":\"SL2526800086908\",\"activationDateTime\":\"20250925142733\",\"macAddress\":\"ishaaafVtzzeqxETqueOpQ==\"}",
+          "response": {
+            "type": "E",
+            "code": "SCIS9000",
+            "desc": "FAIL",
+            "duration": "650"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "operation": "SL0201",
+          "transactionId": "UCEMS20250930022935363",
+          "serviceDomain": "GPV"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "FXuGlpkBRSgSPs_VEYwe",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:29:42.665Z",
+          "logType": "IN_RES",
+          "timestamp": "2025-09-30 02:29:36.121",
+          "service": "PG103701",
+          "ktSvcContId": "SL000059001",
+          "operation": "GPV0201",
+          "transactionId": "UCEMS20250930022935363",
+          "container": {
+            "name": "gpv-864976bb8b-df8n7",
+            "ip": "192.168.104.20"
+          },
+          "device": {
+            "id": "picaso.worker06.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "serviceDomain": "GPV",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "log": {
+            "offset": 3769,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-df8n7_elk.log"
+            }
+          },
+          "response": {
+            "duration": "716",
+            "type": "E",
+            "code": "GPV2257",
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "processDesc": "{\"ktSvcContId\":\"SL000059001\",\"orderNumber\":\"SL2526800086908\",\"macAddress\":\"001DECA47EAA\",\"activationDateTime\":\"20250925142733\"}",
+          "seq": "2",
+          "input": {
+            "type": "log"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "9EyGlpkB9y6EhAQWET52",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:29:42.755Z",
+          "response": {
+            "desc": "FAIL",
+            "duration": "624",
+            "type": "E",
+            "code": "SCIS9000"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "destination": {
+            "ip": "172.16.64.78",
+            "name": "SCIS"
+          },
+          "ktSvcContId": "iihchm3nGuIdzaYkQEwA7w==",
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "serviceDomain": "GPV",
+          "timestamp": "2025-09-30 02:29:36.063",
+          "operation": "SL0201",
+          "log": {
+            "offset": 7087,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "service": "PG103701",
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "url": "http://172.16.64.78:80/sux/api/scispv/open/complete/noti",
+          "gsvcContId": "7mZUeSkHuRgEJ9Sr6yFb1A==",
+          "seq": "2",
+          "payload": "{\"responseCode\":\"SCIS9000\",\"responseMessage\":\"가입계약정보를 찾을 수 없습니다.\"}",
+          "logType": "OUT_RES",
+          "processDesc": "{\"gcode\":\"SL\",\"gsvcContId\":\"7mZUeSkHuRgEJ9Sr6yFb1A==\",\"ktSvcContId\":\"iihchm3nGuIdzaYkQEwA7w==\",\"orderNumber\":\"SL2526900088894\",\"activationDateTime\":\"20250926161445\",\"macAddress\":\"jMftbpHcMdFKwW/uzsKe6Q==\"}",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "transactionId": "UCEMS20250930022935348"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "9UyGlpkB9y6EhAQWET52",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:29:42.755Z",
+          "timestamp": "2025-09-30 02:29:36.093",
+          "seq": "2",
+          "log": {
+            "offset": 8142,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-mxmmm_elk.log"
+            }
+          },
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "response": {
+            "desc": "그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]",
+            "duration": "691",
+            "type": "E",
+            "code": "GPV2257"
+          },
+          "device": {
+            "id": "picaso.worker02.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "service": "PG103701",
+          "container": {
+            "name": "gpv-864976bb8b-mxmmm",
+            "ip": "192.168.124.21"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "processDesc": "{\"ktSvcContId\":\"SL000060405\",\"orderNumber\":\"SL2526900088894\",\"macAddress\":\"001DECA4AF18\",\"activationDateTime\":\"20250926161445\"}",
+          "serviceDomain": "GPV",
+          "ktSvcContId": "SL000060405",
+          "transactionId": "UCEMS20250930022935348",
+          "operation": "GPV0201",
+          "payload": "{\"responseCode\":\"GPV2257\",\"responseMessage\":\"그룹사 연동 시스템 오류 : [SL가입계약정보를 찾을 수 없습니다.]\"}",
+          "logType": "IN_RES"
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "9kyGlpkB9y6EhAQWFj5u",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:29:44.025Z",
+          "log": {
+            "offset": 4645,
+            "file": {
+              "path": "/var/log/ELK/gpv-864976bb8b-nm2k7_elk.log"
+            }
+          },
+          "timestamp": "2025-09-30 02:29:35.466",
+          "serviceDomain": "GPV",
+          "seq": "2",
+          "logType": "IN_RES",
+          "caller": {
+            "channelIp": "192.168.53.249",
+            "channel": "UCEMS"
+          },
+          "url": "http://gpv.picaso.svc.cluster.local:80/gpv/open/complete/noti",
+          "transactionId": "UCEMS20250930022935379",
+          "payload": "{\"responseMessage\":\"SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.\",\"responseCode\":\"GPV2260\"}",
+          "device": {
+            "id": "picaso.worker03.c01.yz-ocp4.container.kt.co.kr"
+          },
+          "ktSvcContId": "SLT50107001",
+          "input": {
+            "type": "log"
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "service": "PG103701",
+          "operation": "GPV0201",
+          "processDesc": "{\"ktSvcContId\":\"SLT50107001\",\"orderNumber\":\"SLT50107001\",\"macAddress\":\"001DEC9118FE\",\"activationDateTime\":\"20250820170305\"}",
+          "response": {
+            "type": "E",
+            "code": "GPV2260",
+            "desc": "SLT50107001 : 해당 서비스계약ID는 존재하지 않습니다.",
+            "duration": ""
+          },
+          "container": {
+            "name": "gpv-864976bb8b-nm2k7",
+            "ip": "192.168.126.28"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "l9-GlpkB3DsinIFlGnhK",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:29:45.013Z",
+          "operation": "GPV0201",
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "timestamp": "2025-09-30 02:29:35.462",
+          "service": "PG103701",
+          "logType": "IN_MSG",
+          "log": {
+            "offset": 7581,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-j5n6d_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "transactionId": "UCEMS20250930022935363",
+          "input": {
+            "type": "log"
+          },
+          "response": {
+            "type": "I",
+            "code": "AGW5200",
+            "duration": "75",
+            "desc": "AGW5200"
+          }
+        }
+      },
+      {
+        "_index": "log_origin-20250930",
+        "_id": "FnuGlpkBRSgSPs_VG4xE",
+        "_score": 1,
+        "_source": {
+          "@timestamp": "2025-09-29T17:29:45.264Z",
+          "operation": "GPV0201",
+          "transactionId": "UCEMS20250930022935363",
+          "logType": "IN_MSG",
+          "url": "https://api.picaso.kt.co.kr/picaso/open/complete/noti",
+          "input": {
+            "type": "log"
+          },
+          "caller": {
+            "channel": "UCEMS",
+            "channelIp": "192.168.53.249"
+          },
+          "service": "PG103701",
+          "response": {
+            "type": "I",
+            "code": "AGW0000",
+            "duration": "735",
+            "desc": "AGW0000"
+          },
+          "log": {
+            "offset": 5577,
+            "file": {
+              "path": "/var/log/ELK/agw-74d96f5cf7-gvrbm_elk.log"
+            }
+          },
+          "ecs": {
+            "version": "8.0.0"
+          },
+          "timestamp": "2025-09-30 02:29:36.123"
+        }
+      }
+  }
+}
