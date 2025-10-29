@@ -25,36 +25,27 @@ API GW/WAS 로그(또는 OpenTelemetry 추출본) ZIP 업로드 → 단일 페�
 ---
 
 ## 아키텍처
-```plaintext
-[사용자] ──(브라우저)──> [Trace2UML Web UI]
-                            └── 업로드: ZIP(logs) / JSON(trace)
-                                │
-                                ▼
-                        [FastAPI 백엔드]
-                ┌────────────┬───────────────┬─────────────┐
-                │ Parser     │ Correlator    │ Enricher    │
-                └─────┬──────┴─────┬─────────┴─────┬───────┘
-                      ▼            ▼               ▼
-                [Event Bus] → [Step Builder] → [LLM Labeler]
-                                             │      │
-                                             │      └→ [RAG KB]
-                                             ▼
-                                    [Diagram Builder]
-                            (PlantUML/Mermaid 템플릿)
-                                             ▼
-                                    [Renderer/Exporter]
-                            (PNG/SVG/MD, Confluence Export)
-
-```
+1. **로그 수집**
+   - API Gateway, WAS, 연동 시스템 로그 수집 (JSON, Text 등)
+2. **전처리**
+   - 타임스탬프 정렬, 호출 관계 추출, 불필요 로그 제거
+3. **LLM 분석**
+   - 호출 흐름 해석 → 시퀀스 다이어그램용 텍스트 생성 (예: PlantUML)
+4. **RAG 연계**
+   - 시스템 구조 문서, API 명세서와 비교하여 정확도 보정
+5. **Embedding 분석**
+   - 유사 흐름 클러스터링, 추천 시퀀스 제공
+6. **시각화**
+   - 시퀀스 다이어그램 생성 (웹 UI, PDF, HTML 등)
 
 ---
 
 ### 구성요소
-Web UI (React/Vite): 파일 업로드, 코릴레이션 선택, 다이어그램 미리보기/토글(성공/실패/대안흐름), 내보내기.   
-FastAPI 백엔드 (Python): 파서/정규화/스텝·패턴 추출/LLM 호출/다이어그램 생성 API.   
-RAG KB (FAISS/In-memory): 시스템 명세/엔드포인트 정의/에러 사전/용어집 임베딩.   
-Renderer: PlantUML CLI(내장 jar) 또는 Mermaid CLI(선택) 헤드리스 변환.   
-~~Storage(파일럿): ephemeral 로컬(컨테이너 볼륨). PII 마스킹 후만 저장.~~
+| 구성 요소 | 역할 |
+|-----------|------|
+| **LLM** | 로그의 의미 해석, API 호출 간 관계 추론, 시퀀스 다이어그램 텍스트 생성 (예: PlantUML) |
+| **RAG** | 시스템 구조 문서, API 명세서, 연동 흐름 문서 등과 연계하여 정확도 향상 |
+| **Embedding** | 로그 벡터화 → 유사 흐름 군집화, 이상 흐름 탐지, 추천 흐름 제공 |
 
 
 ---
@@ -62,7 +53,7 @@ Renderer: PlantUML CLI(내장 jar) 또는 Mermaid CLI(선택) 헤드리스 변�
 ## 입력데이터 & 마스킹
 ### 입력 포맷(샘플 허용)
 * API GW Access Log: NGINX/Envoy 포맷(+ X-Correlation-Id)   
-* WAS App Log (JSON): timestamp, level, traceId, spanId, service, endpoint, status, latencyMs, error   
+* WAS App Log (JSON): timestamp, level, transactionid, spanId, service, endpoint, status, latencyMs, error   
 * OpenTelemetry(선택): traceId, spanId, parentSpanId, attributes{peer.service, http.method, http.route, status}
 ### 마스킹 규칙(파일럿)
 ~~* 주민/전화/계약ID: 포맷보존 토큰화(FPE) 또는 해시+솔트(sha256(id+salt)[:10]).~~   
@@ -70,15 +61,12 @@ Renderer: PlantUML CLI(내장 jar) 또는 Mermaid CLI(선택) 헤드리스 변�
 Payload: 바디 전체 저장 금지, 필드명·길이·타입 메타만 유지.~~
 
 ---
-## 처리파이프라인
-* Parsing: 포맷 감지(정규식/JSON), 필드 추출, 시간 파싱+타임스큐 보정.   
-* Correlation: corr_id|trace_id 기준 그룹핑, 누락 시 휴리스틱(동일 TCP/5초 창·IP·UA)을 보조.   
-* Normalization: 상기 스키마로 맵핑, 내부/파트너 명칭 매핑 테이블 적용.   
-* Patterning: 리트라이/백오프(지수 간격), 타임아웃(504/TimeoutException), Circuit Open, Partial Success 감지.   
-* Step Builder: 동일 Actor→Target, 동일 엔드포인트 호출을 단일 Step으로 압축(요약: 평균·P95 지연, 시도 횟수).   
-* LLM Labeling: Step 요약문/의도 라벨(예: "가입자 정보 검증", "주소 정합성 체크") 생성.   
-* Diagram Builder: 템플릿에 Actor/Step/노트/P95 지연 삽입.   
-Render/Export: PlantUML/Mermaid → PNG/SVG, MD/Confluence 내보내기.
+### 핵심 설계 요약
+- 파이프라인: 업로드 → 전처리 → Parse(LLM) → RAG 보정(간단 문서 인덱스) → Generate(PlantUML, LLM) → Embedding 검색(유사 흐름) → UI 렌더링  
+- LLM 사용 방식: Azure OpenAI 호출로 저온(deterministic) 추론(temperature 0–0.2).  
+- Embedding: Azure OpenAI Embeddings API 사용, 벡터 저장은 Azure Cognitive Search(벡터 검색) 또는 간단히 로컬 FAISS(컨테이너) 사용.  
+- 문서(시스템 구조): PoC용 최소 3개의 텍스트 스니펫(서비스 목록, API 매핑, 엔드포인트 표)만 인덱싱하여 RAG 보정에 사용.  
+- 실행 전략: 모든 것을 가볍게 구성해 빠르게 반복 검증 — 서버리스(Functions) + Blob Storage + 간단 SPA.
 
 ---
 ## RAG 지식베이스(??)
@@ -96,5 +84,17 @@ Render/Export: PlantUML/Mermaid → PNG/SVG, MD/Confluence 내보내기.
 * 우측: Step 패널(라벨·요약·p95·재시도·근거 링크)
 * 하단: [Export PNG] [Export SVG] [Copy PlantUML]
 
-<!-- 링크1 [네이버](http://www.naver.com)   
-![image](./image.png) -->
+### 🎯 기대 효과 정리
+
+- 📉 **장애 분석 속도 향상**: 장애 발생 시 흐름 자동 시각화로 원인 파악 시간 단축
+- 🧩 **신규 기능 설계 지원**: 기존 흐름과 유사한 시퀀스 추천으로 설계 효율화
+- 🤝 **운영-개발 커뮤니케이션 개선**: 시각화된 흐름으로 협업 용이
+- 🧠 **지식 자산화**: 로그 기반 흐름을 문서화하여 조직 내 기술 자산 축적
+
+---
+
+### 🌱 확장 아이디어
+
+- 🔍 **이상 흐름 탐지**: 정상 시퀀스와 다른 흐름 자동 탐지 및 알림
+- 🧪 **테스트 시나리오 자동 생성**: 시퀀스 기반 테스트 케이스 추출
+- 🧭 **API 호출 시뮬레이터**: 시퀀스 다이어그램 기반 API 호출 시뮬레이션
