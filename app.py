@@ -1,17 +1,18 @@
 import streamlit as st
-import json
-import requests
-import openai
-import base64
+import json, base64
 from typing import List, Dict, Any
 from openai import AzureOpenAI
+from dotenv import load_dotenv
+import os
 
-# Azure OpenAI 설정
-AZURE_OPENAI_ENDPOINT = "https://your-azure-openai-endpoint.openai.azure.com/"
-AZURE_DEPLOYMENT_MODEL = "dev-gpt-4.1-mini"
-AZURE_OPENAI_API_KEY = ""
+# .env 파일에서 환경변수 로드
+load_dotenv()
+AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
+AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
+AZURE_DEPLOYMENT_MODEL = os.getenv("AZURE_DEPLOYMENT_MODEL")
 
 
+# OpenAI 클라이언트 초기화
 try:
     # Initialize the OpenAI client
     openai_client = AzureOpenAI(
@@ -89,28 +90,6 @@ def build_parse_prompt(trace_logs: List[Dict[str, Any]]) -> List[Dict[str, str]]
         }
     ]
 
-
-# 함수: PlantUML 생성 프롬프트
-# def build_generate_prompt(refined_steps):
-#     return [
-#         {"role": "system", "content": "당신은 시퀀스 다이어그램(PlantUML) 생성기입니다. 입력으로 받은 refined_steps를 PlantUML 문법으로 변환하여 반환하시오."},
-#         {"role": "user", "content": f"""
-# 작업:
-# 아래 refined_steps를 PlantUML 형식으로 변환하시오. 각 화살표 라벨에 latency_ms 포함, status가 4xx/5xx이면 #red 주석 추가.
-# IN-REQ, OUT-REQ는 화살표 -> , IN-RES, OUT-RES는 화살표 --> 사용.
-
-# 입력:
-# {json.dumps(refined_steps, ensure_ascii=False)}
-
-# 출력 예시:
-# @startuml
-# actor "Skylife-API"
-# participant "PICASO-GW"
-# Skylife-API -> PICASO-GW : POST /subscribe\n120ms
-# @enduml
-# """}
-#     ]
-
 # 함수: PlantUML 생성 프롬프트 (수정본: PlantUML 코드만 반환 강제)
 def build_generate_prompt(refined_steps: Dict[str, Any]) -> List[Dict[str, str]]:
     """
@@ -181,7 +160,7 @@ def logs_to_plantuml(trace_logs: List[Dict[str, Any]]) -> str:
     return plantuml_code
 
 # Streamlit UI
-st.title("📡 로그 기반 시퀀스 다이어그램 생성")
+st.title("📡 PICASO 로그 기반 시퀀스다이어그램 생성")
 
 uploaded_file = st.file_uploader("샘플 로그 파일 업로드 (JSON)", type=["json","log","txt"])
 if uploaded_file:
