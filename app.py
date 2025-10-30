@@ -131,7 +131,7 @@ Skylife-API -> PICASO-GW : POST /subscribe\\n120ms
         }
     ]
 
-# 함수: OpenAI 호출
+# 함수: OpenAI 호출 
 def call_openai(messages):
  
     response = openai_client.chat.completions.create(
