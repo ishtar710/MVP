@@ -12,7 +12,7 @@ AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
 AZURE_DEPLOYMENT_MODEL = os.getenv("AZURE_DEPLOYMENT_MODEL")
 
 
-# OpenAI 클라이언트 초기화
+# OpenAI 클라이언트 초기화 
 try:
     # Initialize the OpenAI client
     openai_client = AzureOpenAI(
