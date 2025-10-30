@@ -4,6 +4,7 @@ from typing import List, Dict, Any
 from openai import AzureOpenAI
 from dotenv import load_dotenv
 import os
+import plantuml
 
 # .env 파일에서 환경변수 로드
 load_dotenv()
@@ -160,7 +161,8 @@ def logs_to_plantuml(trace_logs: List[Dict[str, Any]]) -> str:
     return plantuml_code
 
 # Streamlit UI
-st.title("📡 PICASO 로그 기반 시퀀스다이어그램 생성")
+st.set_page_config(layout="wide")
+st.title("📡 로그 기반 시퀀스다이어그램 생성")
 
 uploaded_file = st.file_uploader("샘플 로그 파일 업로드 (JSON)", type=["json","log","txt"])
 if uploaded_file:
@@ -173,34 +175,65 @@ if uploaded_file:
         # st.subheader("📂 전처리된 로그 미리보기")
         # st.json(logs[:3])  # 앞 3개만 확인
 
+        # # 트랜잭션 ID 목록 추출
+        # trace_ids = list(set([log.get("transactionId") for log in logs if isinstance(log, dict)]))
+        # selected_trace = st.selectbox("분석할 트랜잭션 선택", trace_ids)
+        # # 선택된 트랜잭션 로그만 필터링
+        # trace_logs = [log for log in logs if log.get("transactionId") == selected_trace]
+
         # 트랜잭션 ID 목록 추출
         trace_ids = list(set([log.get("transactionId") for log in logs if isinstance(log, dict)]))
-        selected_trace = st.selectbox("분석할 트랜잭션 선택", trace_ids)
 
-        # 선택된 트랜잭션 로그만 필터링
-        trace_logs = [log for log in logs if log.get("transactionId") == selected_trace]
-        st.subheader("🔍 선택된 로그")
-        st.json(trace_logs)
+        # 좌/우 레이아웃
+        col1, col2 = st.columns([1, 1])
+        with col1:
+
+            st.subheader("🔍 선택된 로그")
+            
+            # 항상 두 입력 UI를 모두 보여줌
+            manual_trace = st.text_input("직접 트랜잭션 ID 입력", "")
+            selected_from_list = st.selectbox("분석할 트랜잭션 선택", trace_ids)
+
+            # 최종 선택 로직
+            if manual_trace.strip():
+                if manual_trace.strip() in trace_ids:
+                    selected_trace = manual_trace.strip()
+                else:
+                    st.warning("⚠️ 입력한 트랜잭션 ID가 목록에 없습니다. 셀렉트 박스에서 선택한 값이 적용됩니다.")
+                    selected_trace = selected_from_list
+            else:
+                selected_trace = selected_from_list
+
+            # 선택된 트랜잭션 로그만 필터링
+            trace_logs = [log for log in logs if log.get("transactionId") == selected_trace]
+
+            st.write(f"현재 선택된 트랜잭션 ID: **{selected_trace}**")
+
+            st.json(trace_logs)
+
+        with col2:
+            st.subheader("⚙️ 시퀀스다이어그램 생성")
+            if st.button("🚀 End-to-End 실행"):
+                with st.spinner("LLM 분석 및 다이어그램 생성 중..."):
+                    try:
+                        plantuml_code = logs_to_plantuml(trace_logs)
+
+                        st.subheader("📈 시퀀스 다이어그램 코드 (PlantUML)")
+                        st.code(plantuml_code, language="plantuml")
+
+                        # PlantUML 서버 렌더링 링크
+                        encoded = plantuml.encode_plantuml(plantuml_code)
+                        uml_url = f"http://www.plantuml.com/plantuml/svg/{encoded}"
+                        print(uml_url)
+                        st.image(uml_url)
+                        st.markdown(f"[🖼️ 새창에서 보기]({uml_url})")
+
+                    except Exception as e:
+                        st.error(f"End-to-End 실행 오류: {e}")
 
     except Exception as e:
         st.error(f"파일 파싱 오류: {e}")
         st.stop()
-
-    if st.button("🚀 End-to-End 실행"):
-        with st.spinner("LLM 분석 및 다이어그램 생성 중..."):
-            try:
-                plantuml_code = logs_to_plantuml(trace_logs)
-
-                st.subheader("📈 시퀀스 다이어그램 코드 (PlantUML)")
-                st.code(plantuml_code, language="plantuml")
-
-                # PlantUML 서버 렌더링 링크
-                encoded = base64.b64encode(plantuml_code.encode()).decode()
-                uml_url = f"http://www.plantuml.com/plantuml/svg/~1{encoded}"
-                st.markdown(f"[🖼️ 다이어그램 보기]({uml_url})")
-
-            except Exception as e:
-                st.error(f"End-to-End 실행 오류: {e}")
 
     # if st.button("🚀 시퀀스 다이어그램 생성"):
     #     with st.spinner("LLM 분석 중..."):
