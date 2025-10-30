@@ -126,9 +126,40 @@ Skylife-API -> PICASO-GW : POST /subscribe\n120ms
 [Azure Web 바로가기](https://pro-lhn-webapp.azurewebsites.net/)
 
 
+ㄴ
+
+## 기타
+
+<details>
+<summary>설계 변경</summary>
+
+<!-- summary 아래 한칸 공백 두어야함 -->
+### Refine 기능 제외
+초기 설계 시 3단계로 파이프 라인을 설계하였으나,  중간 단계인 Refine 에 예상소요 시간이 길어 우선 1,3 단계로 진행함   
+** Refine 단계 : API 기능 설명이나 에러코드 등을 보완
+
+```
+[LLM 기반 분석 파이프라인]
+   ├─ Parse 단계 (로그 → 추론된 step JSON)
+   ├─ Refine 단계 (Parse JSON + RAG 스니펫 → refine JSON)
+   └─ Generate 단계 (refine JSON → PlantUML 코드)
+```
+- 발생한 문제
+  - Azure AI Search 와 Index 생성 :   
+  RAG 로 Refine 기능을 수행하기위해 PICASO 시스템 구조도와 API 규격을 storage 에 넣고 AI Search 와 Embedding 모델 배포함.   
+  인덱스를 원하는대로 설정하지 못하였고, chunk 만 생성됨. contents 의 chunk 로는 refine 을 수행하기 어려움
+  - 인덱스필드 설정을 위해 skillset 생성 :   
+  Azure AI multi-service 생성 후 수동으로 skillset 생성을 시도하였으나 embedding model 사용을 위한 Azure Open AI 호출을 직접할 수 없게 막혀 있음.   
+  결국 수동 skillset 이 아닌 Azure AI Search 통한 Emdedding 기능을 활용해야 함
+- 조치 방안
+  - 원본 문서를 자연어가 아닌 정제된 언어 (ex:json) 로 넣어서 Embedding 시 원하는 Index 생성 가능   
+  기존 문서에서 API 기능 및 내용을 json 으로 추출해 보았으나 현재버전은 데이터 누락이 많아 바로 활용하기 어려움. 추가 보완 필요.
+
+</details>
 
 <!--
-## 부록
-
 ### Refine 기능 
 -->
+
+
+

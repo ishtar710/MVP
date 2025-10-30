@@ -161,10 +161,10 @@ def logs_to_plantuml(trace_logs: List[Dict[str, Any]]) -> str:
     return plantuml_code
 
 # Streamlit UI
-st.set_page_config(layout="wide")
-st.title("📡 로그 기반 시퀀스다이어그램 생성")
+st.set_page_config(layout="wide",page_title="시퀀스다이어그램 생성", page_icon="🎇")
+st.title("📡 PICASO 로그 기반 시퀀스다이어그램 생성")
 
-uploaded_file = st.file_uploader("샘플 로그 파일 업로드 (JSON)", type=["json","log","txt"])
+uploaded_file = st.file_uploader("로그 파일 업로드", type=["json","log","txt"])
 if uploaded_file:
     try:
         raw = json.load(uploaded_file)
@@ -175,21 +175,13 @@ if uploaded_file:
         # st.subheader("📂 전처리된 로그 미리보기")
         # st.json(logs[:3])  # 앞 3개만 확인
 
-        # # 트랜잭션 ID 목록 추출
-        # trace_ids = list(set([log.get("transactionId") for log in logs if isinstance(log, dict)]))
-        # selected_trace = st.selectbox("분석할 트랜잭션 선택", trace_ids)
-        # # 선택된 트랜잭션 로그만 필터링
-        # trace_logs = [log for log in logs if log.get("transactionId") == selected_trace]
-
         # 트랜잭션 ID 목록 추출
         trace_ids = list(set([log.get("transactionId") for log in logs if isinstance(log, dict)]))
 
         # 좌/우 레이아웃
         col1, col2 = st.columns([1, 1])
         with col1:
-
             st.subheader("🔍 선택된 로그")
-            
             # 항상 두 입력 UI를 모두 보여줌
             manual_trace = st.text_input("직접 트랜잭션 ID 입력", "")
             selected_from_list = st.selectbox("분석할 트랜잭션 선택", trace_ids)
@@ -208,7 +200,6 @@ if uploaded_file:
             trace_logs = [log for log in logs if log.get("transactionId") == selected_trace]
 
             st.write(f"현재 선택된 트랜잭션 ID: **{selected_trace}**")
-
             st.json(trace_logs)
 
         with col2:
@@ -224,7 +215,6 @@ if uploaded_file:
                         # PlantUML 서버 렌더링 링크
                         encoded = plantuml.encode_plantuml(plantuml_code)
                         uml_url = f"http://www.plantuml.com/plantuml/svg/{encoded}"
-                        print(uml_url)
                         st.image(uml_url)
                         st.markdown(f"[🖼️ 새창에서 보기]({uml_url})")
 
@@ -235,25 +225,4 @@ if uploaded_file:
         st.error(f"파일 파싱 오류: {e}")
         st.stop()
 
-    # if st.button("🚀 시퀀스 다이어그램 생성"):
-    #     with st.spinner("LLM 분석 중..."):
-    #         parse_prompt = build_parse_prompt(trace_logs)
-    #         # st.write(parse_prompt) # 프롬프트 출력 확인용
-    #         parsed_output = call_openai(parse_prompt)
-    #         print("Parsed Output:", parsed_output)
-    #         parsed_json = json.loads(parsed_output)
 
-    #         # st.subheader("✅ Parse 결과")
-    #         # st.json(parsed_json)
-
-    #         generate_prompt = build_generate_prompt(parsed_json["steps"])
-    #         # st.write(generate_prompt) # 프롬프트 출력 확인용
-    #         plantuml_code = call_openai(generate_prompt)
-
-    #         st.subheader("📈 시퀀스 다이어그램 코드 (PlantUML)")
-    #         st.code(plantuml_code, language="plantuml")
-
-    #         # PlantUML 서버 렌더링 링크
-    #         encoded = base64.b64encode(plantuml_code.encode()).decode()
-    #         uml_url = f"http://www.plantuml.com/plantuml/svg/~1{encoded}"
-    #         st.markdown(f"[🖼️ 다이어그램 보기]({uml_url})")
