@@ -96,9 +96,9 @@
 
 ```plantuml
 @startuml
-actor "Skylife-API"
-participant "PICASO-GW"
-Skylife-API -> PICASO-GW : POST /subscribe\n120ms
+actor "Skylife"
+participant "PICASO"
+Skylife -> PICASO : POST /subscribe\n120ms
 @enduml
 ```
 
@@ -126,7 +126,6 @@ Skylife-API -> PICASO-GW : POST /subscribe\n120ms
 [Azure Web 바로가기](https://pro-lhn-webapp.azurewebsites.net/)
 
 
-ㄴ
 
 ## 기타
 
@@ -157,9 +156,12 @@ Skylife-API -> PICASO-GW : POST /subscribe\n120ms
 
 </details>
 
-<!--
-### Refine 기능 
--->
+<!--details>
+<summary>Web App 배포</summary>
+
+### 
+</details-->
+
 
 
 
