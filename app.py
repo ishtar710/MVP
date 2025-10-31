@@ -1,5 +1,5 @@
 import streamlit as st
-import json, base64
+import json, requests, re
 from typing import List, Dict, Any
 from openai import AzureOpenAI
 from dotenv import load_dotenv
@@ -11,6 +11,11 @@ load_dotenv()
 AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
 AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
 AZURE_DEPLOYMENT_MODEL = os.getenv("AZURE_DEPLOYMENT_MODEL")
+
+# Azure Search 설정
+SEARCH_ENDPOINT = os.getenv("SEARCH_ENDPOINT")
+SEARCH_API_KEY = os.getenv("SEARCH_API_KEY")
+SEARCH_INDEX = os.getenv("SEARCH_INDEX")
 
 
 # OpenAI 클라이언트 초기화 
@@ -91,6 +96,93 @@ def build_parse_prompt(trace_logs: List[Dict[str, Any]]) -> List[Dict[str, str]]
         }
     ]
 
+
+def get_embedding(text):
+    url = f"{AZURE_OPENAI_ENDPOINT}openai/deployments/dev-text-embedding-ada-002/embeddings?api-version=2023-05-15"
+    headers = {
+        "api-key": AZURE_OPENAI_API_KEY,
+        "Content-Type": "application/json"
+    }
+    body = {
+        "input": text
+    }
+    # print("==== get_embedding 호출 ====")
+    # print(url, headers, body)
+    response = requests.post(url, headers=headers, json=body)
+    # print("==== get_embedding 응답 ====")
+    # print(response.text)
+    response.raise_for_status()
+    return response.json()["data"][0]["embedding"]
+
+def search_description_by_embedding(embedding):
+    url = f"{SEARCH_ENDPOINT}/indexes/{SEARCH_INDEX}/docs/search?api-version=2023-10-01-Preview"
+    headers = {
+        "api-key": SEARCH_API_KEY,
+        "Content-Type": "application/json"
+    }
+    body = {
+        "vectorQueries": [
+            {
+                "kind": "vector",
+                "vector": embedding,
+                "fields": "text_vector",
+                "k": 1
+            }
+        ],
+        "select": "chunk,title"
+    }
+    # print("==== search_description_by_embedding 호출 ====")
+    # print(url, headers, body)
+    response = requests.post(url, headers=headers, json=body)
+    # print("==== search_description_by_embedding 응답 ====")
+    # print(response.text)
+    response.raise_for_status()
+    # print("==== search_description_by_embedding 완료 ====")
+    results = response.json()["value"]
+    if results:
+        return results[0]["chunk"]
+    return "설명을 찾을 수 없습니다."
+
+def summarize_description(text):
+    if not text or len(text) < 30:
+        return text  # 짧은 설명은 그대로 유지
+
+    # 1. 오류 코드 추출
+    error_codes = re.findall(r'GPV\d{4}', text)
+    unique_codes = sorted(set(error_codes))
+
+    # 2. 시스템 이름 추출
+    systems = re.findall(r'(MRSS|UCEMS|NCRAB|MEIN|GTBS|BATCH|SICS|GHUB)', text)
+    unique_systems = sorted(set(systems))
+
+    # 3. 요약 문장 생성
+    summary_parts = []
+    if unique_codes:
+        summary_parts.append(f"{len(unique_codes)}개 오류코드 감지됨 ({', '.join(unique_codes[:3])}...)")
+    if unique_systems:
+        summary_parts.append(f"연동 시스템: {', '.join(unique_systems)}")
+
+    return " / ".join(summary_parts) if summary_parts else "오류 목록 포함"
+
+def refine_descriptions(refined_json):
+    for step in refined_json.get("steps", []):
+        original = step.get("description", "")
+        step["description"] = summarize_description(original)
+    return refined_json
+
+def refine_api_descriptions(parsed_json):
+    for step in parsed_json.get("steps", []):
+        action = step.get("action")
+        if action:
+            embedding = get_embedding(action)
+            raw_description = search_description_by_embedding(embedding)
+            summarized = summarize_description(raw_description)
+            step["description"] = summarized
+    # print("==== refine_api_descriptions 완료 ====")
+    # print(parsed_json)
+    return parsed_json
+
+
 # 함수: PlantUML 생성 프롬프트 (수정본: PlantUML 코드만 반환 강제)
 def build_generate_prompt(refined_steps: Dict[str, Any]) -> List[Dict[str, str]]:
     """
@@ -153,9 +245,17 @@ def logs_to_plantuml(trace_logs: List[Dict[str, Any]]) -> str:
     parse_prompt = build_parse_prompt(trace_logs)
     parsed_output = call_openai(parse_prompt)
     parsed_json = json.loads(parsed_output)
+    # print("==== parsed_json ====")
+    # print(parsed_json)
+
+    # 1.5단계: Refine (API 설명 보완) => 보완필요로 연결 제거
+    # refined_json = refine_api_descriptions(parsed_json)
+    # print("==== refined_json ====")
+    # print(refined_json)
 
     # 2단계: Generate
     generate_prompt = build_generate_prompt(parsed_json)
+    # generate_prompt = build_generate_prompt(refined_json)
     plantuml_code = call_openai(generate_prompt)
 
     return plantuml_code
