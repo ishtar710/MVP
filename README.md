@@ -1,6 +1,9 @@
 # 📡 PICASO 로그 기반 시퀀스 다이어그램 자동 생성 시스템
 
-[Azure Web 바로가기](https://pro-lhn-webapp.azurewebsites.net/)
+## WEB 접속
+- [Azure Web 바로가기](https://pro-lhn-webapp.azurewebsites.net/)
+
+---
 
 ## 1. 개요
 
@@ -153,6 +156,7 @@ Skylife -> PICASO : POST /subscribe\n120ms
 - 조치 방안
   - 원본 문서를 자연어가 아닌 정제된 언어 (ex:json) 로 넣어서 Embedding 시 원하는 Index 생성 가능   
   기존 문서에서 API 기능 및 내용을 json 으로 추출해 보았으나 현재버전은 데이터 누락이 많아 바로 활용하기 어려움. 추가 보완 필요.
+   ![alt text](image.png)
 
 </details>
 
